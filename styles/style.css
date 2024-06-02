@@ -1033,6 +1033,10 @@ footer ul li:first-child {
     font-size: 0.8rem;
   }
 
+  .experience {
+    padding-bottom: 0;
+  }
+
   .experience .total {
     font-size: 2rem;
   }
