@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/style.min.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    /></noscript>
+
+    <!-- Scripts -->
+    <script src="header/header.js"></script>
+    <script src="footer/footer.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/cropped-logos-32x32.png" />
+
+    <title>Samples - Impressive Resume Samples at Galaxy Resumes</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
+
+    <!-- Samples -->
+    <section class="samples-section">
+      <div class="container">
+        <h2>Samples</h2>
+        <div class="samples">
+          <div class="sample">
+            <div class="sample-image">
+              <img src="./assets/O1.png" alt="Sample 1" />
+              <div
+                class="zoom-in"
+                onclick="openModal('./assets/O1.png', 'Sample 1')"
+              >
+                <div class="icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+            </div>
+            <p>Strategic Resume, Page 1 of 2</p>
+          </div>
+          <div class="sample">
+            <div class="sample-image">
+              <img src="./assets/g1.png" alt="Sample 2" />
+              <div
+                class="zoom-in"
+                onclick="openModal('./assets/g2.png', 'Sample 2')"
+              >
+                <div class="icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+            </div>
+            <p>Strategic Resume, Page 1 of 2</p>
+          </div>
+          <div class="sample">
+            <div class="sample-image">
+              <img src="./assets/b1.png" alt="Sample 3" />
+              <div
+                class="zoom-in"
+                onclick="openModal('./assets/b1.png', 'Sample 3')"
+              >
+                <div class="icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+            </div>
+            <p>Strategic Resume, Page 1 of 2</p>
+          </div>
+        </div>
+
+        <section class="reviews">
+          <h2>Reviews</h2>
+          <div class="slider-container">
+            <div class="slider">
+              <div class="slide active">
+                <div class="info">
+                  <div class="avatar">
+                    <img src="./assets/placeholder.png" alt="Placeholder" />
+                  </div>
+                  <div class="content">
+                    <h3>Fresher (MBA Finance)</h3>
+                    <div class="starts">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>New Delhi, INDIA</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="text">
+                  Highly appreciate, my brand new Academic resume now looks too
+                  good!!
+                </div>
+              </div>
+              <div class="slide">
+                <div class="info">
+                  <div class="avatar">
+                    <img src="./assets/placeholder.png" alt="Placeholder" />
+                  </div>
+                  <div class="content">
+                    <h3>Leadership Professional (FMCG Industry)</h3>
+                    <div class="starts">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>HYD, India</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="text">
+                  "I am exceedingly impressed with the resume writing services
+                  provided by Galaxy Resumes. My assigned writer was easy to
+                  work with. All throughout the project process, it was very
+                  smooth, plus the final result is amazing. Thank you for the
+                  hard work."
+                </div>
+              </div>
+              <div class="slide">
+                <div class="info">
+                  <div class="avatar">
+                    <img src="./assets/placeholder.png" alt="Placeholder" />
+                  </div>
+                  <div class="content">
+                    <h3>Mid Level (Pharma Industry)</h3>
+                    <div class="starts">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>Excellent</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="text">
+                  "Kudos to my writer from Galaxy Resumes! They deserve an A+
+                  rating for their excellent resume services. At first, I was
+                  unsure of hiring someone from the internet but when my resume
+                  was delivered, I couldn’t be any happier with the write-up.
+                  This is beyond my expectation and I will surely recommend your
+                  service. Thank you very much"
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dots-container">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="arrows">
+            <i class="fa-solid fa-chevron-left"></i>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" alt="" />
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Function to open the modal
+      function openModal(imageSrc, title) {
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImage");
+        var captionText = document.getElementById("caption");
+        modal.style.display = "flex";
+        modalImg.src = imageSrc;
+      }
+
+      // Function to close the modal
+      function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+      }
+
+      // Event listener to close modal when clicked outside content
+      window.onclick = function (event) {
+        var modal = document.getElementById("myModal");
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      // slider
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slide");
+      const dots = document.querySelectorAll(".dot");
+      const arrows = document.querySelectorAll(
+        ".fa-chevron-left, .fa-chevron-right"
+      );
+
+      function showSlide(slideIndex) {
+        slides.forEach((slide, index) => {
+          slide.style.transform = `translateX(-${100 * slideIndex}%)`;
+        });
+
+        dots.forEach((dot, index) => {
+          dot.classList.remove("active");
+          if (index === slideIndex) {
+            dot.classList.add("active");
+          }
+        });
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      // Function to move to the next slide every 2 seconds
+      let intervalId = setInterval(nextSlide, 5000);
+
+      // Function to stop the automatic movement
+      function stopInterval() {
+        clearInterval(intervalId);
+      }
+
+      // Function to restart the automatic movement
+      function startInterval() {
+        clearInterval(intervalId);
+        intervalId = setInterval(nextSlide, 5000);
+      }
+
+      // Call the startInterval() function to begin automatic movement
+      startInterval();
+
+      // Event listener to pause the automatic movement when mouse is over the slider
+      document
+        .querySelector(".slider-container")
+        .addEventListener("mouseenter", stopInterval);
+
+      // Event listener to restart the automatic movement when mouse leaves the slider
+      document
+        .querySelector(".slider-container")
+        .addEventListener("mouseleave", startInterval);
+
+      // Event listeners for pagination dots
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          currentSlide = index;
+          showSlide(currentSlide);
+        });
+      });
+
+      // Event listeners for arrow clicks
+      arrows.forEach((arrow, index) => {
+        arrow.addEventListener("click", () => {
+          if (index === 0) {
+            prevSlide();
+          } else {
+            nextSlide();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
