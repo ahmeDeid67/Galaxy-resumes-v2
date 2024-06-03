@@ -402,6 +402,18 @@ header {
   color: #bbb;
 }
 
+.modal-arrows {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  z-index: 200;
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Reviews */
 .reviews {
   padding-bottom: 3rem;
@@ -1198,6 +1210,7 @@ footer ul li:first-child {
     padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
   }
 
   .samples {
@@ -1237,6 +1250,15 @@ footer ul li:first-child {
 
   .chevron.right {
     right: 0px;
+  }
+
+  .chevron.mobile {
+    opacity: 1; /* Initially visible */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+  }
+
+  .chevron.mobile.dim {
+    opacity: 0.5; /* Dimmed */
   }
 
   .samples-section .samples img {

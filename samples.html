@@ -41,10 +41,7 @@
           <div class="sample">
             <div class="sample-image">
               <img src="./assets/O1.png" alt="Sample 1" />
-              <div
-                class="zoom-in"
-                onclick="openModal('./assets/O1.png', 'Sample 1')"
-              >
+              <div class="zoom-in" onclick="openModal(0)">
                 <div class="icon">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
@@ -55,10 +52,7 @@
           <div class="sample">
             <div class="sample-image">
               <img src="./assets/g1.png" alt="Sample 2" />
-              <div
-                class="zoom-in"
-                onclick="openModal('./assets/g2.png', 'Sample 2')"
-              >
+              <div class="zoom-in" onclick="openModal(1)">
                 <div class="icon">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
@@ -69,10 +63,7 @@
           <div class="sample">
             <div class="sample-image">
               <img src="./assets/b1.png" alt="Sample 3" />
-              <div
-                class="zoom-in"
-                onclick="openModal('./assets/b1.png', 'Sample 3')"
-              >
+              <div class="zoom-in" onclick="openModal(2)">
                 <div class="icon">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
@@ -90,10 +81,7 @@
             <div class="sample">
               <div class="sample-image">
                 <img src="./assets/O1.png" alt="Sample 1" />
-                <div
-                  class="zoom-in"
-                  onclick="openModal('./assets/O1.png', 'Sample 1')"
-                >
+                <div class="zoom-in" onclick="openModal(0)">
                   <div class="icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </div>
@@ -104,10 +92,7 @@
             <div class="sample">
               <div class="sample-image">
                 <img src="./assets/g1.png" alt="Sample 2" />
-                <div
-                  class="zoom-in"
-                  onclick="openModal('./assets/g2.png', 'Sample 2')"
-                >
+                <div class="zoom-in" onclick="openModal(1)">
                   <div class="icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </div>
@@ -118,10 +103,7 @@
             <div class="sample">
               <div class="sample-image">
                 <img src="./assets/b1.png" alt="Sample 3" />
-                <div
-                  class="zoom-in"
-                  onclick="openModal('./assets/b1.png', 'Sample 3')"
-                >
+                <div class="zoom-in" onclick="openModal(2)">
                   <div class="icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </div>
@@ -234,6 +216,16 @@
     <div id="myModal" class="modal">
       <span class="close" onclick="closeModal()">&times;</span>
       <img class="modal-content" id="modalImage" alt="" />
+      <div class="modal-arrows">
+        <i
+          class="fa-solid fa-chevron-left chevron-modal"
+          onclick="navigateModal(-1)"
+        ></i>
+        <i
+          class="fa-solid fa-chevron-right chevron-modal"
+          onclick="navigateModal(1)"
+        ></i>
+      </div>
     </div>
 
     <!-- FOOTER -->
@@ -263,20 +255,20 @@
         samples[currentIndex].classList.add("active");
       }
 
-      function openModal(src, alt) {
-        const modal = document.getElementById("modal");
-        const modalImg = document.getElementById("modal-img");
-        const caption = document.getElementById("caption");
+      // function openModal(src, alt) {
+      //   const modal = document.getElementById("modal");
+      //   const modalImg = document.getElementById("modal-img");
+      //   const caption = document.getElementById("caption");
 
-        modal.style.display = "flex";
-        modalImg.src = src;
-        caption.innerHTML = alt;
-      }
+      //   modal.style.display = "flex";
+      //   modalImg.src = src;
+      //   caption.innerHTML = alt;
+      // }
 
-      function closeModal() {
-        const modal = document.getElementById("modal");
-        modal.style.display = "none";
-      }
+      // function closeModal() {
+      //   const modal = document.getElementById("modal");
+      //   modal.style.display = "none";
+      // }
 
       // Initialize the first sample as active
       document.addEventListener("DOMContentLoaded", () => {
@@ -286,20 +278,61 @@
         }
       });
 
-      // Function to open the modal
-      function openModal(imageSrc, title) {
-        var modal = document.getElementById("myModal");
-        var modalImg = document.getElementById("modalImage");
-        var captionText = document.getElementById("caption");
+      let current = 0;
+      const samplesData = [
+        { src: "./assets/O1.png", alt: "Sample 1" },
+        { src: "./assets/g1.png", alt: "Sample 2" },
+        { src: "./assets/b1.png", alt: "Sample 3" },
+      ];
+
+      function openModal(index) {
+        current = index;
+        const modal = document.getElementById("myModal");
+        const modalImg = document.getElementById("modalImage");
+        // console.log(modalImg.src);
+
         modal.style.display = "flex";
-        modalImg.src = imageSrc;
+        // console.log(samplesData[0].src);
+        modalImg.src = samplesData[current].src;
+        modalImg.alt = samplesData[current].alt;
       }
 
-      // Function to close the modal
       function closeModal() {
-        var modal = document.getElementById("myModal");
+        const modal = document.getElementById("myModal");
         modal.style.display = "none";
       }
+
+      function navigateModal(direction) {
+        current += direction;
+
+        // Wrap around if out of bounds
+        if (current < 0) {
+          current = samplesData.length - 1;
+        } else if (current >= samplesData.length) {
+          current = 0;
+        }
+
+        const modalImg = document.getElementById("modalImage");
+
+        modalImg.src = samplesData[current].src;
+        modalImg.alt = samplesData[current].alt;
+      }
+
+      // Close the modal when clicking outside of the image
+      window.onclick = function (event) {
+        const modal = document.getElementById("myModal");
+        if (event.target == modal) {
+          closeModal();
+        }
+      };
+
+      // Initialize the first sample as active
+      document.addEventListener("DOMContentLoaded", () => {
+        const samples = document.querySelectorAll(".samples-container .sample");
+        if (samples.length > 0) {
+          samples[0].classList.add("active");
+        }
+      });
 
       // Event listener to close modal when clicked outside content
       window.onclick = function (event) {
@@ -308,6 +341,20 @@
           modal.style.display = "none";
         }
       };
+
+      (function animateChevron() {
+        // Add dim class to both chevron buttons
+        const chevronButtons = document.querySelectorAll(".chevron.mobile");
+        chevronButtons.forEach((button) => button.classList.add("dim"));
+
+        // Remove dim class after a short delay
+        setTimeout(() => {
+          chevronButtons.forEach((button) => button.classList.remove("dim"));
+        }, 1000); // Adjust the delay time as needed
+
+        // Repeat the animation after a short interval
+        setTimeout(animateChevron, 2000); // Adjust the interval time as needed
+      })();
 
       // slider
       let currentSlide = 0;
