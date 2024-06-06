@@ -1190,6 +1190,10 @@ footer ul li:first-child {
     margin-top: 125px;
   }
 
+  .samples-section h2 {
+    margin-block: 0;
+  }
+
   .samples.desktop {
     display: none;
   }
