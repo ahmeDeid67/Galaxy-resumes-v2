@@ -1219,7 +1219,7 @@ footer ul li:first-child {
   }
 
   .samples-section h2 {
-    margin-block: 1rem .5rem;
+    margin-block: 0;
   }
 
   .sample {
