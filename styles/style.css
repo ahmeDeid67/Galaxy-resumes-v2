@@ -1218,6 +1218,10 @@ footer ul li:first-child {
     transition: transform 0.5s ease-in-out;
   }
 
+  .samples-section h2 {
+    margin-block: 1rem .5rem;
+  }
+
   .sample {
     min-width: 100%;
     box-sizing: border-box;
