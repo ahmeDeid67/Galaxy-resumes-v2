@@ -968,7 +968,7 @@ footer ul li:first-child {
 /* max-width: 530px */
 @media (max-width: 530px) {
   .header .logo {
-    width: 9rem;
+    width: 10rem;
   }
 
   .header .contact .icons {
