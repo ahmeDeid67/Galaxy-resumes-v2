@@ -901,7 +901,7 @@ footer ul li:first-child {
 
 /* TERMS */
 .terms {
-  margin-top: 130px;
+  margin-top: 160px;
 }
 
 .terms .content {
@@ -966,7 +966,11 @@ footer ul li:first-child {
 }
 
 /* max-width: 530px */
-@media (max-width: 530px) {
+@media (max-width: 565px) {
+  .header .logo {
+    margin-inline: auto;
+  }
+
   .header .contact .icons {
     gap: 0.5rem;
   }
@@ -988,7 +992,7 @@ footer ul li:first-child {
   }
 
   .showcase {
-    margin-top: 125px;
+    margin-top: 160px;
   }
 
   .showcase h1 {
@@ -1012,72 +1016,13 @@ footer ul li:first-child {
     padding: 0.5rem;
   }
 
-  /* .samples-section {
-    margin-top: 125px;
-  }
-
-  .samples.desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
-  }
-
-  .carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-
-  .samples {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .sample {
-    min-width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-  }
-
-  .chevron {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: #333;
-  }
-
-  .chevron.left {
-    left: 10px;
-  }
-
-  .chevron.right {
-    right: 10px;
-  } */
-
-  /* .samples-section .samples {
-    grid-template-columns: 1fr;
-  } */
-
-  /* .samples-section .samples img {
-    width: 100%;
-    height: 450px;
-  } */
-
   .modal-content {
     width: 90%;
     height: 60%;
   }
 
   .pricing {
-    margin-top: 125px;
+    margin-top: 165px;
   }
 
   .pricing h2 {
@@ -1118,7 +1063,7 @@ footer ul li:first-child {
   }
 
   .other-services {
-    margin-top: 125px;
+    margin-top: 165px;
   }
 
   .other-services .services {
@@ -1134,7 +1079,7 @@ footer ul li:first-child {
   }
 
   .contact-us {
-    margin-top: 125px;
+    margin-top: 165px;
   }
 
   .addresses p {
@@ -1154,7 +1099,7 @@ footer ul li:first-child {
   }
 
   .blogs {
-    margin-top: 125px;
+    margin-top: 165px;
   }
 
   .blogs .container > h2 {
@@ -1183,7 +1128,7 @@ footer ul li:first-child {
 
 @media (max-width: 530px) {
   .samples-section {
-    margin-top: 125px;
+    margin-top: 165px;
   }
 
   .samples.desktop {
@@ -1308,24 +1253,11 @@ footer ul li:first-child {
 
 /* max-width: 772px */
 @media (max-width: 772px) {
-  .header .logo {
-    width: 15rem;
-    margin-inline: auto;
-  }
-
   .menu {
-    width: 35%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 1rem;
-    order: 2;
-    display: flex;
-    align-items: flex-start;
-  }
-
-  .header .contact {
-    order: 3;
     margin-top: 1rem;
   }
 
@@ -1350,7 +1282,7 @@ footer ul li:first-child {
     background-color: #cd5532;
     color: #fff;
     font-weight: bold;
-    width: 85%;
+    width: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1408,5 +1340,27 @@ footer ul li:first-child {
   .close {
     top: 15px;
     right: 25px;
+  }
+}
+
+@media (max-width: 565px) {
+  .header .logo {
+    padding-block: 1rem;
+  }
+
+  .menu {
+    width: 35%;
+    order: 2;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .header .contact {
+    order: 3;
+    margin-top: 1rem;
+  }
+
+  .menu .nav-menu {
+    top: 174px;
   }
 }
