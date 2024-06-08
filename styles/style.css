@@ -1359,4 +1359,17 @@ footer ul li:first-child {
   .menu .nav-menu {
     top: 174px;
   }
+
+  .experience {
+    margin-block: 1rem 2rem;
+  }
+
+  .experience h3:nth-child(2) {
+    margin-bottom: 1rem;
+    margin-top: 0.8rem;
+  }
+
+  .experience .total {
+    margin-top: 1rem;
+  }
 }
