@@ -68,11 +68,12 @@ header {
 .experience.hidden,
 .menu .menu-oc,
 .menu nav,
+.mobile,
 .modal {
   display: none;
 }
 .header .logo {
-  width: 16rem;
+  width: 20rem;
   height: auto;
   margin-top: 0.5rem;
 }
@@ -326,20 +327,40 @@ header {
   align-items: center;
   justify-content: center;
 }
+.close,
+.modal-arrows {
+  position: absolute;
+  color: #fff;
+}
 .modal-content {
   width: 604px;
   height: 819px;
 }
+.arrows,
+.modal-arrows {
+  height: 100%;
+  display: flex;
+}
 .close {
-  color: #fff;
   font-size: 30px;
-  position: absolute;
   top: 60px;
   right: 535px;
   cursor: pointer;
 }
 .close:hover {
   color: #bbb;
+}
+.modal-arrows {
+  width: 100%;
+  top: 50%;
+  z-index: 200;
+  font-size: 2rem;
+  justify-content: space-between;
+}
+.arrows i,
+.experience h3,
+.pricing-lower-text {
+  font-size: 1rem;
 }
 .reviews {
   padding-bottom: 3rem;
@@ -354,17 +375,14 @@ header {
 .arrows {
   position: absolute;
   width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
 }
 .arrows i {
   font-weight: 700;
-  font-size: 1rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
@@ -472,9 +490,6 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
-.experience h3 {
-  font-size: 1rem;
-}
 .experience > h3:first-child {
   margin-bottom: 0.5rem;
   border-bottom: 1px solid #7a7a7a;
@@ -530,9 +545,6 @@ input[type="checkbox"]:checked::after {
 .checkbox-label {
   margin-left: 5px;
 }
-.experience {
-  padding-bottom: 0;
-}
 .experience label {
   font-size: 1.2rem;
   cursor: pointer;
@@ -557,7 +569,6 @@ input[type="checkbox"]:checked::after {
 }
 .pricing-lower-text {
   display: none;
-  font-size: 1rem;
   margin-block: 2rem;
 }
 .pricing-top {
@@ -688,8 +699,7 @@ footer ul li:first-child {
   margin-right: 1rem;
   padding-right: 1rem;
 }
-.blogs,
-.terms {
+.blogs {
   margin-top: 130px;
 }
 .blogs .container > h2 {
@@ -716,6 +726,9 @@ footer ul li:first-child {
 .blog a {
   color: #b5321a;
   font-weight: 700;
+}
+.terms {
+  margin-top: 160px;
 }
 .terms .content {
   padding: 1rem;
@@ -755,9 +768,13 @@ footer ul li:first-child {
   font-size: 1.9rem;
   font-weight: 700;
 }
-@media (max-width: 530px) {
+@media (max-width: 565px) {
+  .other-services .services .service i,
+  .why-galaxy h2 {
+    margin-bottom: 1rem;
+  }
   .header .logo {
-    width: 9rem;
+    margin-inline: auto;
   }
   .header .contact .icons {
     gap: 0.5rem;
@@ -780,43 +797,40 @@ footer ul li:first-child {
   .menu .nav-menu {
     top: 130px;
   }
-  .blogs,
-  .contact-us,
-  .other-services,
-  .pricing,
-  .samples-section,
   .showcase {
-    margin-top: 125px;
+    margin-top: 160px;
   }
-  .blogs .container > h2,
   .why-galaxy h2 {
     font-size: 1.5rem;
   }
+  .why-galaxy .features,
   .why-galaxy .features .feature {
     gap: 0;
   }
   .why-galaxy .features .feature .check-mark {
     padding: 0.5rem;
   }
-  .samples-section .samples {
-    grid-template-columns: 1fr;
-  }
-  .samples-section .samples img {
-    width: 100%;
-    height: 450px;
-  }
   .modal-content {
     width: 90%;
     height: 60%;
   }
+  .blogs,
+  .contact-us,
+  .other-services,
+  .pricing {
+    margin-top: 165px;
+  }
   .pricing h2 {
-    margin-block: 0;
+    margin-block: 1rem 0;
   }
   .pricing .container #experience {
     width: 100%;
   }
   .pricing .experience {
     padding-inline: 1rem;
+  }
+  .experience {
+    padding-bottom: 0;
   }
   .experience .total {
     font-size: 2rem;
@@ -834,9 +848,6 @@ footer ul li:first-child {
   .other-services .services {
     row-gap: 2rem;
   }
-  .other-services .services .service i {
-    margin-bottom: 1rem;
-  }
   .addresses p {
     font-size: 0.5rem;
   }
@@ -845,6 +856,9 @@ footer ul li:first-child {
   }
   .contact-us .contacts {
     gap: 2rem;
+  }
+  .blogs .container > h2 {
+    font-size: 1.5rem;
   }
   .blog h2 {
     font-size: 1.4rem;
@@ -856,6 +870,81 @@ footer ul li:first-child {
   .contact-footer:last-of-type {
     right: 10px;
     background-color: #2eb841;
+  }
+}
+@media (max-width: 530px) {
+  .samples-section {
+    margin-top: 165px;
+  }
+  .samples.desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .samples-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .samples-container .samples .sample {
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .samples {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .samples-section h2 {
+    margin-block: 1rem 0;
+  }
+  .sample {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .sample.active {
+    display: block;
+    opacity: 1;
+  }
+  .chevron {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+    font-size: 44px;
+    color: #b5321a;
+    z-index: 100;
+  }
+  .chevron.left {
+    left: 0;
+  }
+  .chevron.right {
+    right: 0;
+  }
+  .chevron.mobile {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .chevron.mobile.dim {
+    opacity: 0.5;
+  }
+  .samples-section .samples img {
+    width: 100%;
+    height: 450px;
+  }
+  .modal-content {
+    width: 90%;
+    height: 60%;
   }
 }
 @media (min-width: 773px) {
@@ -913,7 +1002,7 @@ footer ul li:first-child {
     background-color: #cd5532;
     color: #fff;
     font-weight: 700;
-    width: fit-content;
+    width: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -921,6 +1010,7 @@ footer ul li:first-child {
     font-size: 1.3rem;
     padding: 0.5rem;
     cursor: pointer;
+    border-radius: 40px;
   }
   .menu-oc-container {
     width: 100%;
@@ -952,10 +1042,28 @@ footer ul li:first-child {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .close {
     top: 15px;
     right: 25px;
+  }
+}
+@media (max-width: 565px) {
+  .header .logo {
+    padding-block: 1rem;
+  }
+  .menu {
+    width: 35%;
+    order: 2;
+    display: flex;
+    align-items: flex-start;
+  }
+  .header .contact {
+    order: 3;
+    margin-top: 1rem;
+  }
+  .menu .nav-menu {
+    top: 174px;
   }
 }

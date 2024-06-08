@@ -47,7 +47,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
   height: 100px;
 }
 
@@ -987,10 +987,6 @@ footer ul li:first-child {
     font-size: 0.8rem;
   }
 
-  .menu .nav-menu {
-    top: 130px;
-  }
-
   .showcase {
     margin-top: 160px;
   }
@@ -1198,12 +1194,12 @@ footer ul li:first-child {
   }
 
   .chevron.mobile {
-    opacity: 1; /* Initially visible */
-    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
   }
 
   .chevron.mobile.dim {
-    opacity: 0.5; /* Dimmed */
+    opacity: 0.5;
   }
 
   .samples-section .samples img {
