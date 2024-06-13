@@ -1115,6 +1115,10 @@ footer ul li:first-child {
     margin-top: 165px;
   }
 
+  .get-text {
+    font-size: 1rem;
+  }
+
   .addresses p {
     font-size: 0.5rem;
   }
