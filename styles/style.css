@@ -1407,8 +1407,8 @@ footer ul li:first-child {
   }
 
   .experience {
-    margin-block: 1rem 2rem;
-    padding-top: 1.2rem;
+    margin-block: 0.5rem 2rem;
+    padding-top: 0.7rem;
   }
 
   .experience h3:nth-child(2) {
@@ -1417,6 +1417,6 @@ footer ul li:first-child {
   }
 
   .experience .total {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 }
