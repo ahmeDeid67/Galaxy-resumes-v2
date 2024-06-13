@@ -45,7 +45,7 @@
           <option value="leadership">Leadership</option>
         </select>
 
-        <audio
+        <!-- <audio
           id="checkboxSound"
           src="assets/chime-sound.mp3"
           preload="auto"
@@ -54,7 +54,7 @@
           id="checkboxUncheckedSound"
           src="assets/swoosh-sound.mp3"
           preload="auto"
-        ></audio>
+        ></audio> -->
 
         <div class="fresher experience hidden">
           <h3>'Fresher' Resume</h3>
@@ -334,15 +334,13 @@
           const checkboxes = section.querySelectorAll('input[type="checkbox"]');
           checkboxes.forEach((checkbox) => {
             checkbox.addEventListener("change", function () {
-              if (checkbox.checked) {
-                // Restart and play the checked sound effect
-                checkboxSound.currentTime = 0;
-                checkboxSound.play();
-              } else {
-                // Restart and play the unchecked sound effect
-                checkboxUncheckedSound.currentTime = 0;
-                checkboxUncheckedSound.play();
-              }
+              // if (checkbox.checked) {
+              //   checkboxSound.currentTime = 0;
+              //   checkboxSound.play();
+              // } else {
+              //   checkboxUncheckedSound.currentTime = 0;
+              //   checkboxUncheckedSound.play();
+              // }
               // Update the total price when a checkbox is changed
               updateTotalPrice();
             });
