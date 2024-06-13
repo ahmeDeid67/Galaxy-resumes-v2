@@ -780,7 +780,7 @@ input[type="checkbox"]:checked::after {
 
 .get-text {
   margin-bottom: 2rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -802,10 +802,7 @@ input[type="checkbox"]:checked::after {
   gap: 1rem;
 }
 
-.contact-us .contacts .contact:first-child {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.contact-us .contacts .contact:not(:last-child) {
   margin-bottom: 1rem;
 }
 
@@ -857,7 +854,7 @@ input[type="checkbox"]:checked::after {
 
 .contact-us .contacts .contact-text a {
   color: #7a7a7a;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-decoration: underline;
   text-wrap: nowrap;
 }
