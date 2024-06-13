@@ -768,7 +768,7 @@ input[type="checkbox"]:checked::after {
   text-align: center;
   color: #cd5532;
   font-size: 2rem;
-  margin-block: 2rem 4rem;
+  margin-block: 2rem 1rem;
   font-family: "Jost", sans-serif;
 }
 
@@ -779,8 +779,9 @@ input[type="checkbox"]:checked::after {
 }
 
 .get-text {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: 1rem;
+  text-align: center;
 }
 
 .get-contact {
@@ -789,16 +790,23 @@ input[type="checkbox"]:checked::after {
   font-weight: bold;
 }
 
-.contact-us .contacts {
+/* .contact-us .contacts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-}
+} */
 
 .contact-us .contacts .contact {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.contact-us .contacts .contact:first-child {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .contact-us .contacts .contact .icon.blue {
