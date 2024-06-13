@@ -772,6 +772,23 @@ input[type="checkbox"]:checked::after {
   font-family: "Jost", sans-serif;
 }
 
+.get-in-touch {
+  color: #cd5532;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.get-text {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.get-contact {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 .contact-us .contacts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1325,8 +1342,13 @@ footer ul li:first-child {
     border-bottom: 5px solid #cd5532;
   }
 
-  .experience .total {
+  /* .experience .total {
     width: auto;
+  } */
+
+  .pricing--contact {
+    font-size: 0.7rem;
+    margin-bottom: 0.3rem;
   }
 
   footer .container {
