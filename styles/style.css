@@ -661,9 +661,8 @@ input[type="checkbox"]:checked::after {
   font-size: 3rem;
   font-weight: bold;
   margin-top: 2rem;
-  text-align: center;
-  margin-left: 2rem;
-  width: 400px;
+  width: fit-content;
+  margin-inline: auto;
 }
 
 .pricing--contact {

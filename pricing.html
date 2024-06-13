@@ -45,6 +45,17 @@
           <option value="leadership">Leadership</option>
         </select>
 
+        <audio
+          id="checkboxSound"
+          src="assets/chime-sound.mp3"
+          preload="auto"
+        ></audio>
+        <audio
+          id="checkboxUncheckedSound"
+          src="assets/swoosh-sound.mp3"
+          preload="auto"
+        ></audio>
+
         <div class="fresher experience hidden">
           <h3>
             'Fresher' Resume - <span class="pricing-color">Rs. 1600</span>
@@ -94,7 +105,7 @@
             </div>
 
             <div class="total fresher">
-              Total <span class="pricing-color">Rs. 1600</span>
+              Total <span class="pricing-color">Rs. 0</span>
             </div>
             <p class="pricing--contact">
               Questions?!! Call or Whats app at +91 9818 749 023
@@ -151,8 +162,11 @@
             </div>
 
             <div class="total experienced">
-              Total <span class="pricing-color">Rs. 2,100</span>
+              Total <span class="pricing-color">Rs. 0</span>
             </div>
+            <p class="pricing--contact">
+              Questions?!! Call or Whats app at +91 9818 749 023
+            </p>
           </form>
         </div>
 
@@ -205,8 +219,11 @@
             </div>
 
             <div class="total leadership">
-              Total <span class="pricing-color">Rs. 4,100</span>
+              Total <span class="pricing-color">Rs. 0</span>
             </div>
+            <p class="pricing--contact">
+              Questions?!! Call or Whats app at +91 9818 749 023
+            </p>
           </form>
         </div>
 
@@ -242,6 +259,10 @@
         const originalBorderColor = selectElement.style.borderColor;
         const resumeImage = document.getElementById("resumeImage");
         const resumeText = document.querySelector(".pricing-lower-text");
+        const checkboxSound = document.getElementById("checkboxSound");
+        const checkboxUncheckedSound = document.getElementById(
+          "checkboxUncheckedSound"
+        );
 
         selectElement.addEventListener("change", () => {
           selectElement.style.border = "1px solid #f00";
@@ -264,13 +285,13 @@
 
         // Function to update total price
         function updateTotalPrice() {
-          let totalPrices = [1600, 2100, 4100];
+          // let totalPrices = [1600, 2100, 4100];
 
           sections.forEach((section, index) => {
             const checkboxes = section.querySelectorAll(
               'input[type="checkbox"]:checked'
             );
-            let currentTotal = totalPrices[index];
+            let currentTotal = 0;
 
             checkboxes.forEach((checkbox) => {
               const price = parseInt(checkbox.getAttribute("data-price"));
@@ -319,6 +340,15 @@
           const checkboxes = section.querySelectorAll('input[type="checkbox"]');
           checkboxes.forEach((checkbox) => {
             checkbox.addEventListener("change", function () {
+              if (checkbox.checked) {
+                // Restart and play the checked sound effect
+                checkboxSound.currentTime = 0;
+                checkboxSound.play();
+              } else {
+                // Restart and play the unchecked sound effect
+                checkboxUncheckedSound.currentTime = 0;
+                checkboxUncheckedSound.play();
+              }
               // Update the total price when a checkbox is changed
               updateTotalPrice();
             });
