@@ -1419,4 +1419,8 @@ footer ul li:first-child {
   .experience .total {
     margin-top: 0.5rem;
   }
+
+  .contact-footer {
+    bottom: 20px;
+  }
 }
