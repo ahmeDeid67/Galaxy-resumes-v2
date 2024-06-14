@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style.min.css" />
 
     <!-- Font Awesome -->
     <link
@@ -45,36 +45,27 @@
           <option value="leadership">Leadership</option>
         </select>
 
-        <!-- <audio
-          id="checkboxSound"
-          src="assets/chime-sound.mp3"
-          preload="auto"
-        ></audio>
-        <audio
-          id="checkboxUncheckedSound"
-          src="assets/swoosh-sound.mp3"
-          preload="auto"
-        ></audio> -->
-
         <div class="fresher experience hidden">
-          <h3>'Fresher' Resume</h3>
+          <h3>'Fresher' Category</h3>
           <form action="">
             <div>
               <input type="checkbox" name="price" id="a" data-price="1600" />
-              <label for="a">Indian Format <span>@Rs 1600</span></label>
+              <label for="a">Indian Format Resume <span>@Rs 1600</span></label>
             </div>
             <div>
-              <input type="checkbox" name="price" id="a" data-price="2100" />
-              <label for="a">International Format <span>@Rs 2100</span></label>
+              <input type="checkbox" name="price" id="a" data-price="2200" />
+              <label for="a"
+                >International Format Resume <span>@Rs 2200</span></label
+              >
             </div>
             <div>
               <input type="checkbox" name="price" id="b" data-price="700" />
               <label for="b">Career Bio <span>@Rs 700</span></label>
             </div>
             <div>
-              <input type="checkbox" name="price" id="c" data-price="1200" />
+              <input type="checkbox" name="price" id="c" data-price="1400" />
               <label for="c"
-                >LinkedIn Profile Makeover <span>@Rs 1200</span></label
+                >LinkedIn Profile Makeover <span>@Rs 1400</span></label
               >
             </div>
             <div>
@@ -95,9 +86,9 @@
               >
             </div>
             <div>
-              <input type="checkbox" name="price" id="g" data-price="1200" />
+              <input type="checkbox" name="price" id="g" data-price="1400" />
               <label for="g"
-                >Urgent Delivery 24 hrs <span>@Rs 1200</span
+                >Urgent Delivery 24 hrs <span>@Rs 1400</span
                 ><span class="extra">Extra</span></label
               >
             </div>
@@ -116,11 +107,13 @@
           <form action="">
             <div>
               <input type="checkbox" name="price" id="a" data-price="2100" />
-              <label for="a">Indian Format <span>@Rs 2100</span></label>
+              <label for="a">Indian Format Resume <span>@Rs 2100</span></label>
             </div>
             <div>
-              <input type="checkbox" name="price" id="a" data-price="3500" />
-              <label for="a">International Format <span>@Rs 3500</span></label>
+              <input type="checkbox" name="price" id="a" data-price="3600" />
+              <label for="a"
+                >International Format Resume <span>@Rs 3600</span></label
+              >
             </div>
             <div>
               <input type="checkbox" name="price" id="b" data-price="1000" />
@@ -150,9 +143,9 @@
               >
             </div>
             <div>
-              <input type="checkbox" name="price" id="g" data-price="1500" />
+              <input type="checkbox" name="price" id="g" data-price="1900" />
               <label for="g"
-                >Urgent Delivery 24 hrs <span>@Rs 1500</span
+                >Urgent Delivery 24 hrs <span>@Rs 1900</span
                 ><span class="extra">Extra</span></label
               >
             </div>
@@ -167,15 +160,17 @@
         </div>
 
         <div class="leadership experience hidden">
-          <h3>'Leadership' Resume</h3>
+          <h3>'Leadership' Category</h3>
           <form action="">
             <div>
               <input type="checkbox" name="price" id="a" data-price="4100" />
-              <label for="a">Indian Format <span>@Rs.4100</span></label>
+              <label for="a">Indian Format Resume <span>@Rs.4100</span></label>
             </div>
             <div>
               <input type="checkbox" name="price" id="a" data-price="6100" />
-              <label for="a">International Format <span>@Rs.6100</span></label>
+              <label for="a"
+                >International Format Resume <span>@Rs.6100</span></label
+              >
             </div>
             <div>
               <input type="checkbox" name="price" id="b" data-price="1500" />
@@ -205,9 +200,9 @@
               >
             </div>
             <div>
-              <input type="checkbox" name="price" id="g" data-price="2500" />
+              <input type="checkbox" name="price" id="g" data-price="3000" />
               <label for="g"
-                >Urgent Delivery 24hrs <span>@Rs.2500</span
+                >Urgent Delivery 24hrs <span>@Rs.3000</span
                 ><span class="extra">Extra</span></label
               >
             </div>
@@ -334,14 +329,6 @@
           const checkboxes = section.querySelectorAll('input[type="checkbox"]');
           checkboxes.forEach((checkbox) => {
             checkbox.addEventListener("change", function () {
-              // if (checkbox.checked) {
-              //   checkboxSound.currentTime = 0;
-              //   checkboxSound.play();
-              // } else {
-              //   checkboxUncheckedSound.currentTime = 0;
-              //   checkboxUncheckedSound.play();
-              // }
-              // Update the total price when a checkbox is changed
               updateTotalPrice();
             });
           });

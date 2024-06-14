@@ -14,13 +14,6 @@ img {
   text-align: center;
   font-family: Jost, sans-serif;
 }
-.header .contact p,
-.pricing h2,
-.samples-section h2,
-.showcase h1,
-.why-galaxy h2 {
-  font-family: Jost, sans-serif;
-}
 * {
   margin: 0;
   padding: 0;
@@ -77,6 +70,11 @@ header {
   height: auto;
   margin-top: 0.5rem;
 }
+.addresses h3,
+.blog h2,
+.blog ol {
+  margin-top: 2rem;
+}
 .header .contact .icons {
   display: flex;
   align-items: center;
@@ -117,6 +115,7 @@ header {
   font-size: 1.3rem;
 }
 .header .contact p {
+  font-family: Jost, sans-serif;
   font-weight: 700;
   color: #929292;
   font-size: 1.7rem;
@@ -262,12 +261,14 @@ header {
 .samples-section {
   margin-top: 125px;
 }
+.contact-us h2,
 .pricing h2,
 .samples-section h2 {
   text-align: center;
   color: #cd5532;
   font-size: 2rem;
   margin-block: 2rem 1rem;
+  font-family: Jost, sans-serif;
 }
 .samples-section .samples {
   gap: 2rem;
@@ -356,11 +357,6 @@ header {
   font-size: 2rem;
   justify-content: space-between;
 }
-.arrows i,
-.experience h3,
-.pricing-lower-text {
-  font-size: 1rem;
-}
 .reviews {
   padding-bottom: 3rem;
   position: relative;
@@ -382,10 +378,12 @@ header {
 }
 .arrows i {
   font-weight: 700;
+  font-size: 1rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-.arrows i:hover {
+.arrows i:hover,
+.experience h3 {
   font-size: 1.5rem;
 }
 .slider {
@@ -405,19 +403,12 @@ header {
   display: flex;
   gap: 1rem;
 }
-.contact-us .contacts,
-.other-services .services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
 .slide .info .avatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
 }
-.other-services .services .service .price p > span,
-.pricing-color,
 .slide .info h3 {
   color: #cd5532;
 }
@@ -460,6 +451,17 @@ header {
   border-radius: 50%;
   width: 60px;
 }
+.experience,
+.experience .total {
+  width: fit-content;
+  margin-inline: auto;
+}
+.contact-us .contacts .contact:not(:last-child),
+.experience h3,
+.pricing-lower-text p:first-child,
+.pricing-top {
+  margin-bottom: 1rem;
+}
 .pricing .container {
   text-align: center;
 }
@@ -483,28 +485,13 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: fit-content;
-  margin-inline: auto;
   padding: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
-.experience > h3:first-child {
-  margin-bottom: 0.5rem;
+.experience h3 {
   border-bottom: 1px solid #7a7a7a;
   padding-bottom: 0.5rem;
-  font-size: 1.5rem;
-}
-.experience h3:nth-child(2) {
-  margin-bottom: 1.5rem;
-  margin-top: 2rem;
-  text-align: left;
-  width: 100%;
-  padding-inline: 1rem;
-}
-.pricing-lower-text p:first-child,
-.pricing-top {
-  margin-bottom: 1rem;
 }
 .experience div {
   display: flex;
@@ -518,28 +505,37 @@ input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 input[type="checkbox"]:checked {
   background-color: #0b7be6;
   border-color: #929292;
 }
-input[type="checkbox"]:checked + label span {
+input[type="checkbox"]:checked + label span:first-child {
   color: #cd5532;
   font-weight: 700;
 }
 input[type="checkbox"]:checked::after {
   content: "\2713";
   color: #fff;
-  font-size: 14px;
+  font-size: 20px;
   position: relative;
   top: -2px;
   left: 2px;
+}
+.extra {
+  font-weight: 700;
+  font-style: italic;
+  color: #000;
+  margin-left: 0.5rem;
 }
 .checkbox-label {
   margin-left: 5px;
@@ -549,7 +545,6 @@ input[type="checkbox"]:checked::after {
   cursor: pointer;
 }
 .blogs .container > h2,
-.contact-us h2,
 .other-services h2 {
   font-size: 2rem;
   color: #cd5532;
@@ -559,15 +554,21 @@ input[type="checkbox"]:checked::after {
   font-size: 3rem;
   font-weight: 700;
   margin-top: 2rem;
-  text-align: center;
-  margin-left: 2rem;
-  width: 400px;
+}
+.pricing--contact {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.other-services .services .service .price p > span,
+.pricing-color {
+  color: #cd5532;
 }
 .pricing-line {
   border-bottom: 2px solid #000;
 }
 .pricing-lower-text {
   display: none;
+  font-size: 1rem;
   margin-block: 2rem;
 }
 .pricing-top {
@@ -580,12 +581,13 @@ input[type="checkbox"]:checked::after {
   width: 60px;
   height: auto;
 }
-.contact-us h2,
 .other-services h2 {
   text-align: center;
   margin-block: 2rem 4rem;
 }
 .other-services .services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 5rem 1rem;
   padding-bottom: 5rem;
 }
@@ -618,8 +620,20 @@ input[type="checkbox"]:checked::after {
   padding-bottom: 4rem;
   border-bottom: 1px solid #929292;
 }
-.contact-us .contacts {
-  gap: 1rem;
+.get-in-touch {
+  color: #cd5532;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.get-text {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.get-contact {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
 }
 .contact-us .contacts .contact {
   display: flex;
@@ -663,7 +677,7 @@ input[type="checkbox"]:checked::after {
 }
 .contact-us .contacts .contact-text a {
   color: #7a7a7a;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-decoration: underline;
   text-wrap: nowrap;
 }
@@ -674,7 +688,6 @@ input[type="checkbox"]:checked::after {
 .addresses h3 {
   font-weight: 700;
   margin-bottom: 1.3rem;
-  margin-top: 2rem;
 }
 .addresses p {
   margin-bottom: 1rem;
@@ -710,12 +723,10 @@ footer ul li:first-child {
 .blog h2 {
   font-size: 1.7rem;
   margin-bottom: 0.5rem;
-  margin-top: 2rem;
   font-family: Jost, sans-serif;
 }
 .blog ol {
   margin-left: 2.5rem;
-  margin-top: 2rem;
 }
 .blog li,
 .blog p {
@@ -921,8 +932,9 @@ footer ul li:first-child {
   .nav-link.active1 {
     border-bottom: 5px solid #cd5532;
   }
-  .experience .total {
-    width: auto;
+  .pricing--contact {
+    font-size: 0.7rem;
+    margin-bottom: 0.3rem;
   }
   footer .container {
     font-size: 0.6rem;
@@ -957,6 +969,7 @@ footer ul li:first-child {
     gap: 0.5rem;
   }
   .contact-us .contacts .contact-text a,
+  .get-text,
   .header .contact .icons i,
   .other-services .services .service h3,
   .showcase h1 {
@@ -1003,10 +1016,6 @@ footer ul li:first-child {
   }
   .pricing .experience {
     padding-inline: 1rem;
-  }
-  .experience .total {
-    font-size: 2rem;
-    margin-top: 1rem;
   }
   .pricing-lower-text {
     font-size: 0.7rem;
@@ -1058,7 +1067,14 @@ footer ul li:first-child {
   }
   .experience {
     padding-bottom: 0;
-    margin-block: 1rem 2rem;
-    padding-top: 1.2rem;
+    margin-block: 0.5rem 2rem;
+    padding-top: 0.7rem;
+  }
+  .experience .total {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+  }
+  .contact-footer {
+    bottom: 20px;
   }
 }
