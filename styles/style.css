@@ -808,6 +808,10 @@ input[type="checkbox"]:checked::after {
   line-height: 2;
 }
 
+.get--blue {
+  color: #144072;
+}
+
 .get-contact {
   margin-bottom: 1rem;
   font-size: 1rem;
