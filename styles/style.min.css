@@ -123,6 +123,7 @@ header {
 .header .contact a {
   font-size: 0.9rem;
   text-decoration: underline;
+  color: #000;
 }
 .menu nav {
   transition: 0.3s ease-in-out;
@@ -492,6 +493,7 @@ header {
 .experience h3 {
   border-bottom: 1px solid #7a7a7a;
   padding-bottom: 0.5rem;
+  color: #144072;
 }
 .experience div {
   display: flex;
@@ -547,7 +549,6 @@ input[type="checkbox"]:checked::after {
 .blogs .container > h2,
 .other-services h2 {
   font-size: 2rem;
-  color: #cd5532;
   font-family: Jost, sans-serif;
 }
 .experience .total {
@@ -558,6 +559,8 @@ input[type="checkbox"]:checked::after {
 .pricing--contact {
   font-weight: 700;
   font-size: 1rem;
+  text-align: center;
+  color: #144072;
 }
 .other-services .services .service .price p > span,
 .pricing-color {
@@ -583,6 +586,7 @@ input[type="checkbox"]:checked::after {
 }
 .other-services h2 {
   text-align: center;
+  color: #cd5532;
   margin-block: 2rem 4rem;
 }
 .other-services .services {
@@ -629,6 +633,10 @@ input[type="checkbox"]:checked::after {
   margin-bottom: 2rem;
   font-size: 1.5rem;
   text-align: center;
+  line-height: 2;
+}
+.get--blue {
+  color: #144072;
 }
 .get-contact {
   margin-bottom: 1rem;
@@ -676,7 +684,7 @@ input[type="checkbox"]:checked::after {
   font-weight: 700;
 }
 .contact-us .contacts .contact-text a {
-  color: #7a7a7a;
+  color: #000;
   font-size: 1rem;
   text-decoration: underline;
   text-wrap: nowrap;
@@ -715,6 +723,7 @@ footer ul li:first-child {
   margin-top: 130px;
 }
 .blogs .container > h2 {
+  color: #cd5532;
   margin-bottom: 1rem;
 }
 .blog {
@@ -991,8 +1000,16 @@ footer ul li:first-child {
   .why-galaxy h2 {
     font-size: 1.5rem;
   }
-  .why-galaxy .features,
-  .why-galaxy .features .feature {
+  .why-galaxy .features-right {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .why-galaxy .features {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .why-galaxy .features .feature,
+  .why-galaxy .features-left {
     gap: 0;
   }
   .why-galaxy .features .feature .check-mark {
@@ -1022,7 +1039,7 @@ footer ul li:first-child {
     margin-block: 1rem;
   }
   .experience h3:first-child {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .experience h3:nth-child(2) {
     padding-right: 1.5rem;
