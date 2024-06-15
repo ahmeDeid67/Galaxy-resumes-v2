@@ -166,7 +166,77 @@ header {
   font-family: "Jost", sans-serif;
 }
 
-.why-galaxy .features {
+/* Edit Why Galaxy */
+.why-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.why-features .box {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.why-features .box h3 {
+  color: #cd5532;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.why-features .salient li {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.why-features .salient li::before {
+  content: "★";
+  color: #cd5532;
+  margin-right: 5px;
+  font-size: 1rem;
+}
+
+.why-galaxy .trusted-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.why-galaxy .trusted-images img {
+  width: 100px;
+}
+
+.why-galaxy .free-review {
+  text-align: center;
+}
+
+.why-galaxy .free-review p {
+  color: #000;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.why-galaxy .free-review p:first-of-type {
+  margin-bottom: 0.5rem;
+}
+
+.why-galaxy .free-review .free-review--btn {
+  background-color: #144072;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+/* End Edit Why Galaxy */
+
+/* .why-galaxy .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
@@ -286,7 +356,7 @@ header {
 .why-galaxy .features .features-right .extention {
   font-size: 0.8rem;
   font-weight: bold;
-}
+} */
 
 /* SAMPLES PAGE */
 .samples-section {
@@ -466,6 +536,12 @@ header {
   cursor: pointer;
 }
 
+.review--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .slide .info {
   display: flex;
   gap: 1rem;
@@ -487,7 +563,7 @@ header {
 }
 
 .slide .info .starts i {
-  color: #42a12a;
+  color: #fcbc01;
   margin-block: 0.5rem;
 }
 
@@ -502,6 +578,10 @@ header {
   height: 1px;
   background-color: #bbb;
   margin-bottom: 1rem;
+}
+
+.google--logo img {
+  width: 40px;
 }
 
 .slide .text {
@@ -759,6 +839,80 @@ input[type="checkbox"]:checked::after {
   color: #cd5532;
 }
 
+/* Questions & Answers */
+.container .q-header {
+  margin-top: 170px;
+  color: #cd5532;
+  text-align: center;
+  font-size: 2rem;
+}
+.accordion {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  cursor: pointer;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+  align-items: center;
+}
+
+.number,
+.text {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.number {
+  color: #ced4da;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.hidden-box {
+  grid-column: 2;
+
+  display: none;
+}
+
+.hidden-box p {
+  line-height: 1.6;
+  margin-bottom: 24px;
+  font-size: 1rem;
+}
+
+.hidden-box p span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #cd5532;
+}
+
+/* OPEN STATE */
+.open {
+  border-top: 4px solid #cd5532;
+}
+
+.open .hidden-box {
+  display: block;
+}
+
+.open .number,
+.open .text,
+.open .icon {
+  color: #cd5532;
+}
+
 /* CONTACT US PAGE */
 .contact-us {
   margin-top: 135px;
@@ -804,6 +958,20 @@ input[type="checkbox"]:checked::after {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 } */
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.contact-container p {
+  text-align: center;
+  color: #144072;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
 .contact-us .contacts .contact {
   display: flex;
@@ -1398,6 +1566,13 @@ footer ul li:first-child {
     margin-bottom: 1rem;
   }
 
+  .why-features {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
   .close {
     top: 15px;
     right: 25px;
@@ -1437,6 +1612,32 @@ footer ul li:first-child {
 
   .experience .total {
     margin-top: 0.5rem;
+  }
+
+  .container .q-header {
+    margin-top: 180px;
+    font-size: 1.5rem;
+  }
+
+  .accordion {
+    margin-top: 30px;
+  }
+
+  .number,
+  .text {
+    font-size: 16px;
+  }
+
+  .hidden-box {
+    grid-column: 1 / 4;
+  }
+
+  .hidden-box p {
+    font-size: 0.8rem;
+  }
+
+  .hidden-box p span {
+    font-size: 1rem;
   }
 
   .contact-footer {
