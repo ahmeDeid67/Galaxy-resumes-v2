@@ -269,7 +269,7 @@ header {
 
 .btn-container {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .why-galaxy .free-review .free-review--btn {
@@ -279,7 +279,7 @@ header {
   display: inline-block;
   border-radius: 10px;
   font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
   transition: 0.3s ease-in-out;
 }
 
@@ -287,12 +287,12 @@ header {
   background-color: rgba(205, 85, 50, 0.9);
 }
 
-.why-galaxy .free-review i {
+.why-galaxy .free-review img {
   position: absolute;
   top: 80%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 2.5rem;
+  width: 40px;
   color: #144072;
 }
 /* End Edit Why Galaxy */
