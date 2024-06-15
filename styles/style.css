@@ -547,7 +547,7 @@ header {
 }
 
 /* Reviews */
-.reviews {
+/* .reviews {
   padding-bottom: 3rem;
   position: relative;
 }
@@ -668,6 +668,141 @@ header {
 
 .dot.active {
   background-color: #000;
+} */
+
+/* Edit Reviews Styles */
+.reviews {
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.slider {
+  overflow: hidden;
+
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #fff);
+}
+
+.slider::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+}
+
+.slider:hover .slider--container {
+  animation-play-state: paused;
+}
+
+.slider--container {
+  display: flex;
+  gap: 1rem;
+
+  padding-block: 1rem;
+
+  animation: 50s slide infinite linear;
+}
+
+.slide {
+  width: 400px;
+  flex: 0 0 auto;
+  padding: 2rem 2rem 1rem;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide:hover {
+  transform: scale(1.1);
+}
+
+/* @keyframes slide-animation {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+} */
+
+.review--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slide .info {
+  display: flex;
+  gap: 1rem;
+}
+
+.slide .info .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.slide .info .avatar img {
+  width: 100%;
+}
+
+.slide .info h3 {
+  color: #cd5532;
+}
+
+.slide .info .starts i {
+  color: #fcbc01;
+  margin-block: 0.5rem;
+}
+
+.slide .info p {
+  color: #929292;
+  margin-bottom: 1rem;
+}
+
+.slide hr {
+  border: none;
+  width: 100%;
+  height: 1px;
+  background-color: #bbb;
+  margin-bottom: 1rem;
+}
+
+.google--logo img {
+  width: 40px;
+}
+
+.slide .text {
+  color: #525252;
+  font-size: 0.8rem;
 }
 
 /* PRICING PAGE */
@@ -1680,6 +1815,11 @@ footer ul li:first-child {
     width: 90%;
   }
 
+  .slider::before,
+  .slider::after {
+    width: 10px;
+  }
+
   .arrows {
     gap: 100%;
   }
@@ -1708,6 +1848,10 @@ footer ul li:first-child {
 
   .hidden-box p span {
     font-size: 1rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
   }
 
   .contact-footer {

@@ -575,9 +575,9 @@
 
         <section class="reviews">
           <h2>Reviews</h2>
-          <div class="slider-container">
-            <div class="slider">
-              <div class="slide active">
+          <div class="slider">
+            <div class="slider--container">
+              <div class="slide">
                 <div class="review--container">
                   <div class="info">
                     <div class="avatar">
@@ -1144,7 +1144,7 @@
         setTimeout(animateChevron, 2000); // Adjust the interval time as needed
       })();
 
-      // slider
+      /* // slider
       let currentSlide = 0;
       const slides = document.querySelectorAll(".slide");
       const dots = document.querySelectorAll(".dot");
@@ -1219,7 +1219,10 @@
             nextSlide();
           }
         });
-      });
+      });*/
+
+      const copy = document.querySelector(".slider--container").cloneNode(true);
+      document.querySelector(".slider").appendChild(copy);
     </script>
   </body>
 </html>
