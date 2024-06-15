@@ -219,7 +219,8 @@ header {
 .why-galaxy .trusted-images {
   position: relative;
   overflow: hidden;
-  height: 250px;
+  /* height: 250px; */
+  height: 80%;
 
   display: flex;
   align-items: center;
@@ -269,7 +270,7 @@ header {
 
 .btn-container {
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 3.5rem;
 }
 
 .why-galaxy .free-review .free-review--btn {
@@ -287,13 +288,26 @@ header {
   background-color: rgba(205, 85, 50, 0.9);
 }
 
-.why-galaxy .free-review img {
+.why-galaxy .free-review .btn--action {
   position: absolute;
-  top: 80%;
-  left: 50%;
+  top: 25%;
+  left: 90%;
   transform: translateX(-50%);
-  width: 40px;
   color: #144072;
+}
+
+.why-galaxy .free-review svg {
+  width: 4rem;
+}
+
+.instructions {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.instructions h4 {
+  color: #cd5532;
+  font-size: 1rem;
 }
 /* End Edit Why Galaxy */
 
