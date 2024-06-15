@@ -200,15 +200,40 @@ header {
 }
 
 .why-galaxy .trusted-images {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-galaxy .trusted-images .image-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
   justify-content: center;
+  position: absolute;
+  gap: 1rem;
+  top: 0;
+  animation: scroll 30s linear infinite;
 }
 
 .why-galaxy .trusted-images img {
   width: 100px;
+
+  display: block;
+  margin: 20px 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
 }
 
 .why-galaxy .free-review {
