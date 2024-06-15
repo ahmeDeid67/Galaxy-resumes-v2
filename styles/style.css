@@ -258,16 +258,6 @@ header {
   text-align: center;
 }
 
-.why-galaxy .free-review p {
-  color: #000;
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-.why-galaxy .free-review p:first-of-type {
-  margin-bottom: 0.5rem;
-}
-
 .btn-container {
   position: relative;
   margin-bottom: 3.5rem;
@@ -290,14 +280,20 @@ header {
 
 .why-galaxy .free-review .btn--action {
   position: absolute;
-  top: 25%;
-  left: 90%;
+  top: 50%;
+  left: 50%;
   transform: translateX(-50%);
   color: #144072;
 }
 
-.why-galaxy .free-review svg {
-  width: 4rem;
+.why-galaxy .free-review img {
+  width: 3rem;
+}
+
+.why-galaxy .free-review .btn--action p {
+  font-size: 1rem;
+  color: #144072;
+  font-weight: bold;
 }
 
 .instructions {
@@ -308,6 +304,13 @@ header {
 .instructions h4 {
   color: #cd5532;
   font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.instructions li {
+  font-size: 0.7rem;
+  margin-left: 1rem;
+  margin-bottom: 0.4rem;
 }
 /* End Edit Why Galaxy */
 
