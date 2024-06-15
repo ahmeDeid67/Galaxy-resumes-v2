@@ -171,7 +171,7 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-block: 1rem;
 }
 
 .why-features .box {
@@ -520,7 +520,7 @@ header {
   position: relative;
   overflow: hidden;
   margin-inline: auto;
-  width: 90%;
+  width: 50%;
 }
 
 .arrows {
@@ -531,7 +531,8 @@ header {
   left: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 55%;
   padding: 1rem;
 }
 
@@ -1637,6 +1638,14 @@ footer ul li:first-child {
 
   .experience .total {
     margin-top: 0.5rem;
+  }
+
+  .slider-container {
+    width: 90%;
+  }
+
+  .arrows {
+    gap: 100%;
   }
 
   .container .q-header {
