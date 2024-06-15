@@ -181,7 +181,7 @@ header {
 }
 
 .why-features .box h3 {
-  color: #cd5532;
+  color: #144072;
   font-size: 1.2rem;
   margin-bottom: 1rem;
   text-align: center;
@@ -250,14 +250,33 @@ header {
   margin-bottom: 0.5rem;
 }
 
+.btn-container {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
 .why-galaxy .free-review .free-review--btn {
-  background-color: #144072;
+  background-color: #cd5532;
   color: #fff;
   padding: 0.5rem 1rem;
   display: inline-block;
   border-radius: 10px;
   font-size: 1rem;
   margin-bottom: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.why-galaxy .free-review .free-review--btn:hover {
+  background-color: rgba(205, 85, 50, 0.9);
+}
+
+.why-galaxy .free-review i {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  color: #144072;
 }
 /* End Edit Why Galaxy */
 
