@@ -260,7 +260,7 @@ header {
 
 .btn-container {
   position: relative;
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
 }
 
 .why-galaxy .free-review .free-review--btn {
@@ -280,7 +280,7 @@ header {
 
 .why-galaxy .free-review .btn--action {
   position: absolute;
-  top: 65%;
+  top: 80%;
   left: 50%;
   transform: translateX(-50%);
   color: #144072;
