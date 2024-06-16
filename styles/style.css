@@ -988,6 +988,8 @@ input[type="checkbox"]:checked::after {
 .experience label {
   font-size: 1.4rem;
   cursor: pointer;
+  color: #144072;
+  font-weight: bold;
 }
 
 .experience .total {
@@ -1505,11 +1507,11 @@ footer ul li:first-child {
   }
 
   .pricing .experience {
-    padding-inline: 1rem;
+    padding-inline: 0.2rem;
   }
 
   .experience label {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .experience {
