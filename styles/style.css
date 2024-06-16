@@ -1007,7 +1007,7 @@ input[type="checkbox"]:checked::after {
 
 .pricing--contact {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-align: center;
   color: #144072;
 }
@@ -1801,7 +1801,7 @@ footer ul li:first-child {
   } */
 
   .pricing--contact {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin-bottom: 0.3rem;
   }
 
