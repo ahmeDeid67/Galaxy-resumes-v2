@@ -176,7 +176,7 @@ header {
 
 .why-features .box {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 0.9rem;
+  padding: 0.8rem;
   border-radius: 10px;
 }
 
@@ -187,20 +187,50 @@ header {
   text-align: center;
 }
 
+.why-features .salient ul {
+  counter-reset: li;
+}
+
 .why-features .salient li {
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  counter-reset: li;
 }
 
 .why-features .salient li::before {
   content: counter(li);
-  color: #cd5532;
+  counter-increment: li;
   margin-right: 5px;
   font-size: 1.1rem;
-  display: inline-block;
-  /* animation: pulse 2s infinite; */
+
+  color: #000;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  /* box-shadow: inset 5px 5px 10px #b8b9be, inset -5px -5px 10px #ffffff; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) inset; */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(255, 255, 255, 1) inset; */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4),
+    0 2px 5px rgba(255, 255, 255, 1) inset;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* .counter {
+  background-color: #fff;
+  color: #000;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+} */
 
 /* @keyframes pulse {
   0% {
