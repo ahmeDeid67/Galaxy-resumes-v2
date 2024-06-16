@@ -900,6 +900,13 @@ header {
     no-repeat right 10px center;
   background-size: 18px;
   outline: none;
+
+  color: #144072;
+  font-weight: bold;
+}
+
+.pricing .container #experience option {
+  font-weight: bold;
 }
 
 .experience {
@@ -988,8 +995,6 @@ input[type="checkbox"]:checked::after {
 .experience label {
   font-size: 1.4rem;
   cursor: pointer;
-  color: #144072;
-  font-weight: bold;
 }
 
 .experience .total {
@@ -1507,11 +1512,11 @@ footer ul li:first-child {
   }
 
   .pricing .experience {
-    padding-inline: 0.2rem;
+    padding-inline: 1rem;
   }
 
   .experience label {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .experience {
