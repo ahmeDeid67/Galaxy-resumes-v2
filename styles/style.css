@@ -190,10 +190,11 @@ header {
 .why-features .salient li {
   font-size: 1rem;
   margin-bottom: 0.5rem;
+  counter-reset: li;
 }
 
 .why-features .salient li::before {
-  content: "★";
+  content: counter(li);
   color: #cd5532;
   margin-right: 5px;
   font-size: 1.1rem;
