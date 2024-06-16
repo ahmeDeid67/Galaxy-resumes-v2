@@ -198,10 +198,10 @@ header {
   margin-right: 5px;
   font-size: 1.1rem;
   display: inline-block;
-  animation: pulse 2s infinite;
+  /* animation: pulse 2s infinite; */
 }
 
-@keyframes pulse {
+/* @keyframes pulse {
   0% {
     transform: scale(1);
     opacity: 1;
@@ -214,7 +214,7 @@ header {
     transform: scale(1);
     opacity: 1;
   }
-}
+} */
 
 .why-galaxy .trusted-images {
   position: relative;
@@ -260,7 +260,7 @@ header {
 
 .btn-container {
   position: relative;
-  margin-bottom: 4rem;
+  margin-bottom: 2.2rem;
 }
 
 .why-galaxy .free-review .free-review--btn {
@@ -308,7 +308,7 @@ header {
 }
 
 .instructions li {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-left: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -741,7 +741,7 @@ header {
 
   padding-block: 1rem;
 
-  animation: 50s slide infinite linear;
+  animation: 150s slide infinite linear;
 }
 
 .slide {
@@ -881,14 +881,6 @@ header {
   color: #144072;
 }
 
-/* .experience h3:nth-child(2) {
-  margin-bottom: 1.5rem;
-  margin-top: 2rem;
-  text-align: left;
-  width: 100%;
-  padding-inline: 1rem;
-} */
-
 .experience div {
   display: flex;
   justify-content: flex-start;
@@ -949,7 +941,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .experience label {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   cursor: pointer;
 }
 
@@ -1086,7 +1078,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .number {
-  color: #ced4da;
+  color: #555;
 }
 
 .icon {
@@ -1871,11 +1863,16 @@ footer ul li:first-child {
     font-size: 1rem;
   }
 
+  .contact-us .container {
+    padding-bottom: 2rem;
+  }
+
   .contact-container {
     flex-direction: column;
   }
 
   .contact-footer {
     bottom: 20px;
+    z-index: 100;
   }
 }
