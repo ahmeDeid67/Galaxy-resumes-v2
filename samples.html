@@ -1134,19 +1134,19 @@
         }
       };
 
-      (function animateChevron() {
-        // Add dim class to both chevron buttons
-        const chevronButtons = document.querySelectorAll(".chevron.mobile");
-        chevronButtons.forEach((button) => button.classList.add("dim"));
+      // (function animateChevron() {
+      //   // Add dim class to both chevron buttons
+      //   const chevronButtons = document.querySelectorAll(".chevron.mobile");
+      //   chevronButtons.forEach((button) => button.classList.add("dim"));
 
-        // Remove dim class after a short delay
-        setTimeout(() => {
-          chevronButtons.forEach((button) => button.classList.remove("dim"));
-        }, 1000); // Adjust the delay time as needed
+      //   // Remove dim class after a short delay
+      //   setTimeout(() => {
+      //     chevronButtons.forEach((button) => button.classList.remove("dim"));
+      //   }, 1000); // Adjust the delay time as needed
 
-        // Repeat the animation after a short interval
-        setTimeout(animateChevron, 2000); // Adjust the interval time as needed
-      })();
+      //   // Repeat the animation after a short interval
+      //   setTimeout(animateChevron, 2000); // Adjust the interval time as needed
+      // })();
 
       /* // slider
       let currentSlide = 0;
