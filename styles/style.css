@@ -1121,6 +1121,7 @@ input[type="checkbox"]:checked::after {
   column-gap: 24px;
   row-gap: 32px;
   align-items: center;
+  border-top: 4px solid #cd5532;
 }
 
 .number,
@@ -1140,8 +1141,6 @@ input[type="checkbox"]:checked::after {
 
 .hidden-box {
   grid-column: 2;
-
-  display: none;
 }
 
 .hidden-box p {
@@ -1157,13 +1156,6 @@ input[type="checkbox"]:checked::after {
 }
 
 /* OPEN STATE */
-.open {
-  border-top: 4px solid #cd5532;
-}
-
-.open .hidden-box {
-  display: block;
-}
 
 .open .number,
 .open .text,
