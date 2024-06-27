@@ -573,7 +573,7 @@ input[type="checkbox"]:checked {
   background-color: #0b7be6;
   border-color: #929292;
 }
-input[type="checkbox"]:checked + label span:first-child {
+input[type="checkbox"]:checked + label span:last-child {
   color: #cd5532;
   font-weight: 700;
 }
