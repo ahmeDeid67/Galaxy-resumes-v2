@@ -903,9 +903,13 @@ header {
   font-weight: bold;
 }
 
-.pricing .container #experience option {
+.pricing .container #experience option:not(:first-child) {
   font-weight: bold;
   color: #cd5532;
+}
+
+.pricing .container #experience option {
+  font-weight: bold;
 }
 
 .experience {
