@@ -1115,8 +1115,8 @@ input[type="checkbox"]:checked::after {
 .invoice-btns {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 48px;
+  justify-content: space-between;
+  /* gap: 48px; */
 }
 
 .invoice-btn {
