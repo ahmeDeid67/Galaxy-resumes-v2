@@ -43,9 +43,7 @@
         <h2>Pricing</h2>
 
         <select name="experience" id="experience">
-          <option class="experience-blank" selected value="">
-            Select Experience
-          </option>
+          <option selected value="">Select Experience</option>
           <option value="fresher">Fresher Category</option>
           <option value="experienced">Experienced Category</option>
           <option value="leadership">Managerial or Leadership Category</option>
@@ -160,7 +158,7 @@
               Total
               <span class="pricing-color">Rs. 0</span>
             </div>
-            <a href="invoice.html" class="invoice-btn">Proceed</a>
+            <a href="invoice.html" class="proceed">Proceed</a>
             <p class="pricing--contact">
               Questions?!! Call or Whats app at +91 9818 749 023
             </p>
@@ -278,7 +276,7 @@
               Total
               <span class="pricing-color">Rs. 0</span>
             </div>
-            <a href="invoice.html" class="invoice-btn">Proceed</a>
+            <a href="invoice.html" class="proceed">Proceed</a>
             <p class="pricing--contact">
               Questions?!! Call or Whats app at +91 9818 749 023
             </p>
@@ -393,7 +391,7 @@
               Total
               <span class="pricing-color">Rs. 0</span>
             </div>
-            <a href="invoice.html" class="invoice-btn">Proceed</a>
+            <a href="invoice.html" class="proceed">Proceed</a>
             <p class="pricing--contact">
               Questions?!! Call or Whats app at +91 9818 749 023
             </p>
@@ -550,40 +548,6 @@
             window.location.href = "invoice.html";
           });
         });
-        // const updateLocalStorage = () => {
-
-        // }
-        // /////////////////////////////////////////////////
-
-        // proceedBtn.addEventListener("click", function () {
-        //   const selectedPlan = selectElement.value;
-        //   const selectedOptions = [];
-        //   let totalPrice = 0;
-
-        //   sections.forEach((section) => {
-        //     const checkboxes = section.querySelectorAll(
-        //       'input[type="checkbox"]:checked'
-        //     );
-        //     checkboxes.forEach((checkbox) => {
-        //       const price = parseInt(checkbox.getAttribute("data-price"));
-        //       totalPrice += price;
-        //       selectedOptions.push({
-        //         name: checkbox.getAttribute("data-name"),
-        //         price: price,
-        //       });
-        //     });
-        //   });
-
-        //   const params = new URLSearchParams();
-        //   params.append("plan", selectedPlan);
-        //   params.append("total", totalPrice);
-        //   selectedOptions.forEach((option, index) => {
-        //     params.append(`option${index}Name`, option.name);
-        //     params.append(`option${index}Price`, option.price);
-        //   });
-
-        //   window.location.href = `invoice.html?${params.toString()}`;
-        // });
 
         // Select the first option by default
         selectElement.selectedIndex = 0;

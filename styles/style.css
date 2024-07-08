@@ -1009,7 +1009,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .experience .proceed {
-  background-color: #ddd;
+  background-color: #cd5532;
   padding: 0.5rem 1.2rem;
   border-radius: 15px;
   font-size: 2rem;
@@ -1017,11 +1017,7 @@ input[type="checkbox"]:checked::after {
   margin-bottom: 18px;
   font-weight: bold;
   transition: background-color 0.3s;
-  color: #cd5532;
-}
-
-.experience .proceed:hover {
-  background-color: #bbb;
+  color: #fff;
 }
 
 .pricing--contact {
@@ -1070,25 +1066,25 @@ input[type="checkbox"]:checked::after {
 }
 
 .invoice {
-  text-align: center;
   padding-block: 8px 16px;
-}
-
-.invoice-subtitle {
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: 8px;
-  text-transform: capitalize;
-  color: #cd5532;
-  text-align: left;
 }
 
 .invoice-title {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 28px;
   margin-top: 8px;
   text-transform: capitalize;
   color: #000;
+  text-align: center;
+}
+
+.invoice-title span {
+  color: #cd5532;
+}
+
+.invoice-box {
+  width: fit-content;
+  margin: auto;
 }
 
 .invoice-list {
@@ -1103,6 +1099,10 @@ input[type="checkbox"]:checked::after {
 
 .invoice-item span {
   color: #cd5532;
+}
+
+.invoice-item li {
+  list-style: disc;
 }
 
 .invoice-total {
@@ -1153,14 +1153,15 @@ input[type="checkbox"]:checked::after {
   margin-bottom: 12px;
 }
 
-.invoice-pay-text:nth-of-type(2) {
-  color: #757575;
-  font-weight: bold;
-}
-
 .invoice-pay-text:not(:first-of-type) {
   font-size: 16px;
   margin-bottom: 4px;
+}
+
+.invoice-pay-text:nth-of-type(2) {
+  color: #757575;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .invoice-footer {
