@@ -361,6 +361,10 @@ header {
   justify-content: center;
   transition: 0.3s ease-in-out;
 }
+.experience .proceed:hover,
+.slide hr {
+  background-color: #bbb;
+}
 .other-services .services .service,
 .slide {
   transition: transform 0.5s ease-in-out;
@@ -503,7 +507,6 @@ header {
   border: none;
   width: 100%;
   height: 1px;
-  background-color: #bbb;
 }
 .google--logo img {
   width: 40px;
@@ -526,7 +529,7 @@ header {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>')
     right 10px center/18px no-repeat;
   outline: 0;
-  color: #144072;
+  color: #cd5532;
   font-weight: 700;
 }
 .pricing .container #experience option {
@@ -546,6 +549,10 @@ header {
   padding-bottom: 0.5rem;
   font-size: 1.5rem;
   color: #144072;
+}
+.extra,
+.invoice-total strong {
+  color: #000;
 }
 .experience div {
   display: flex;
@@ -588,7 +595,6 @@ input[type="checkbox"]:checked::after {
 .extra {
   font-weight: 700;
   font-style: italic;
-  color: #000;
   margin-left: 0.5rem;
 }
 .checkbox-label {
@@ -602,6 +608,16 @@ input[type="checkbox"]:checked::after {
   font-size: 3rem;
   font-weight: 700;
   margin-top: 2rem;
+}
+.experience .proceed {
+  background-color: #ddd;
+  padding: 0.5rem 1.2rem;
+  border-radius: 15px;
+  font-size: 2rem;
+  display: inline-block;
+  margin-bottom: 18px;
+  font-weight: 700;
+  transition: background-color 0.3s;
 }
 .pricing--contact {
   font-weight: 700;
@@ -633,6 +649,75 @@ input[type="checkbox"]:checked::after {
 .pricing-top img {
   width: 60px;
   height: auto;
+}
+.pricing-invoice {
+  margin-top: 140px;
+}
+.invoice {
+  text-align: center;
+  padding-block: 8px 16px;
+}
+.invoice-title {
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 8px;
+  text-transform: capitalize;
+}
+.invoice-list {
+  font-size: 18px;
+  margin-top: 18px;
+}
+.invoice-item {
+  margin-bottom: 12px;
+}
+.invoice-total {
+  font-size: 24px;
+  margin-top: 18px;
+  color: #cd5532;
+}
+.invoice-btn,
+.invoice-instruction {
+  font-weight: 700;
+  font-size: 18px;
+}
+.invoice-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.invoice-btn {
+  background-color: #cd5532;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+.invoice-payment {
+  display: none;
+  text-align: center;
+  margin-top: 18px;
+  margin-bottom: 24px;
+}
+.invoice-img {
+  width: 100px;
+}
+.invoice-pay-text:first-of-type {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.invoice-pay-text:not(:first-of-type) {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.invoice-footer {
+  text-align: center;
+  margin-bottom: 12px;
 }
 .other-services h2 {
   text-align: center;
@@ -1001,6 +1086,10 @@ footer ul li:first-child {
   }
 }
 @media (max-width: 772px) {
+  .menu .menu-oc,
+  .menu nav li {
+    font-weight: 700;
+  }
   .menu {
     width: 100%;
     display: flex;
@@ -1018,15 +1107,16 @@ footer ul li:first-child {
     padding: 1rem;
     font-size: 1.2rem;
   }
-  .menu nav li {
-    margin-bottom: 1rem;
-    font-weight: 700;
+  .menu nav {
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+  }
+  .menu nav li:not(:last-child) {
+    margin-bottom: 1.7rem;
   }
   .menu .menu-oc {
     display: block;
     background-color: #cd5532;
     color: #fff;
-    font-weight: 700;
     width: 120px;
     display: flex;
     align-items: center;
@@ -1243,5 +1333,8 @@ footer ul li:first-child {
   .contact-footer {
     bottom: 20px;
     z-index: 100;
+  }
+  .pricing-invoice {
+    margin-top: 180px;
   }
 }

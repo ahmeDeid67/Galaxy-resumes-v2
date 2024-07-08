@@ -2032,4 +2032,8 @@ footer ul li:first-child {
     bottom: 20px;
     z-index: 100;
   }
+
+  .pricing-invoice {
+    margin-top: 180px;
+  }
 }
