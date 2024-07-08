@@ -2064,4 +2064,13 @@ footer ul li:first-child {
   .pricing-invoice {
     margin-top: 180px;
   }
+
+  .invoice-btns {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .invoice-btn {
+    margin-bottom: 0;
+  }
 }
