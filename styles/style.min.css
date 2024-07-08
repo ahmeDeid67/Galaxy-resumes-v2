@@ -515,6 +515,12 @@ header {
   color: #525252;
   font-size: 0.8rem;
 }
+.experience .proceed,
+.pricing .container #experience option,
+input[type="checkbox"]:checked + label span:last-child {
+  color: #cd5532;
+  font-weight: 700;
+}
 .pricing .container #experience {
   border: 1px solid #929292;
   width: 60%;
@@ -529,10 +535,6 @@ header {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>')
     right 10px center/18px no-repeat;
   outline: 0;
-  color: #cd5532;
-  font-weight: 700;
-}
-.pricing .container #experience option {
   font-weight: 700;
 }
 .experience {
@@ -580,10 +582,6 @@ input[type="checkbox"]:checked {
   background-color: #0b7be6;
   border-color: #929292;
 }
-input[type="checkbox"]:checked + label span:last-child {
-  color: #cd5532;
-  font-weight: 700;
-}
 input[type="checkbox"]:checked::after {
   content: "\2713";
   color: #fff;
@@ -616,7 +614,6 @@ input[type="checkbox"]:checked::after {
   font-size: 2rem;
   display: inline-block;
   margin-bottom: 18px;
-  font-weight: 700;
   transition: background-color 0.3s;
 }
 .pricing--contact {
@@ -662,18 +659,20 @@ input[type="checkbox"]:checked::after {
   font-size: 30px;
   margin-top: 8px;
   text-transform: capitalize;
+  color: #cd5532;
 }
 .invoice-list {
   font-size: 18px;
   margin-top: 18px;
 }
 .invoice-item {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 .invoice-total {
   font-size: 24px;
   margin-top: 18px;
   color: #cd5532;
+  font-weight: 700;
 }
 .invoice-btn,
 .invoice-instruction {
@@ -684,7 +683,7 @@ input[type="checkbox"]:checked::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 16px;
 }
 .invoice-btn {
   background-color: #cd5532;
@@ -710,9 +709,12 @@ input[type="checkbox"]:checked::after {
   font-size: 20px;
   margin-bottom: 12px;
 }
+.invoice-pay-text:nth-of-type(2) {
+  color: #757575;
+  font-weight: 700;
+}
 .invoice-pay-text:not(:first-of-type) {
   font-size: 16px;
-  font-weight: 700;
   margin-bottom: 4px;
 }
 .invoice-footer {
