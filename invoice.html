@@ -35,6 +35,10 @@
             <div class="invoice-item">Cover Letter &dash; 900</div>
           </div>
           <div class="invoice-total"><strong>Total</strong> - 3000</div>
+          <div class="invoice-btns">
+            <a href="pricing.html" class="invoice-btn">Back</a>
+            <a href="#" class="invoice-btn proceed-btn">Proceed for Payment</a>
+          </div>
         </div>
 
         <div class="invoice-payment">
@@ -53,7 +57,6 @@
         </div>
 
         <div class="invoice-footer">
-          <a href="pricing.html" class="invoice-btn">Back</a>
           <div class="invoice-instruction">
             Once done with payment, simply send us Payment Screenshot through
             Whats app or BOTIM at 9818749023 and we kick start the work within 5
@@ -109,6 +112,17 @@
         invoiceTotal.innerHTML = `<strong>Total</strong> - ${totalPrice || 0}`;
 
         localStorage.clear();
+      });
+
+      const invoicePay = document.querySelector(".proceed-btn");
+      const invoiceAddress = document.querySelector(".invoice-payment");
+      console.log(invoicePay);
+      console.log(invoiceAddress);
+
+      invoicePay.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        invoiceAddress.style.display = "block";
       });
     </script>
   </body>
