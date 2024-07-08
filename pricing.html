@@ -439,9 +439,9 @@
               Total
               <span class="pricing-color">Rs. 0</span>
             </div>
-            <button class="proceed">Proceed</button>
+            <a href="invoice.html" class="proceed">Proceed</a>
 
-            <section class="invoice-payment-leadership">
+            <section class="invoice-payment">
               <img
                 src="./assets/UPI.jpg"
                 alt="Adressess Logo"
@@ -492,7 +492,7 @@
         const originalBorderColor = selectElement.style.borderColor;
         const resumeImage = document.getElementById("resumeImage");
         const resumeText = document.querySelector(".pricing-lower-text");
-        const proceedBtn = document.querySelectorAll(".proceed");
+        const proceedBtns = document.querySelectorAll(".proceed");
 
         selectElement.addEventListener("change", () => {
           selectElement.style.border = "1px solid #f00";
@@ -505,22 +505,25 @@
         // Function to hide all sections except the selected one
         function showSelectedSection(selectedOption) {
           sections.forEach((section) => {
+            const invoiceAddress = section.querySelector(".invoice-payment");
             if (section.classList.contains(selectedOption)) {
               section.classList.remove("hidden");
             } else {
               section.classList.add("hidden");
+              if (invoiceAddress) {
+                invoiceAddress.style.display = "none";
+              }
             }
           });
         }
 
         // Function to update total price
         function updateTotalPrice() {
-          // let totalPrices = [1600, 2100, 4100];
-
           sections.forEach((section, index) => {
             const checkboxes = section.querySelectorAll(
               'input[type="checkbox"]:checked'
             );
+            const invoiceAddress = section.querySelector(".invoice-payment");
             let currentTotal = 0;
 
             checkboxes.forEach((checkbox) => {
@@ -530,6 +533,14 @@
 
             // Display the total price for this section
             totalPriceSpans[index].textContent = `Rs. ${currentTotal}`;
+
+            // Check if all checkboxes are unchecked
+            if (
+              section.querySelectorAll('input[type="checkbox"]:checked')
+                .length === 0
+            ) {
+              invoiceAddress.style.display = "none";
+            }
           });
         }
 
@@ -558,10 +569,10 @@
           // Show the image and hide the text if not the default option
           if (selectedOption === "") {
             resumeImage.style.display = "block";
-            resumeText.style.display = "none";
+            // resumeText.style.display = "none";
           } else {
             resumeImage.style.display = "none";
-            resumeText.style.display = "block";
+            // resumeText.style.display = "block";
           }
         });
 
@@ -620,10 +631,17 @@
         //     window.location.href = "invoice.html";
         //   });
         // });
-        proceedBtn.forEach((btn) => {
+        proceedBtns.forEach((btn) => {
           btn.addEventListener("click", (e) => {
             e.preventDefault();
             const parentSection = btn.closest(".experience");
+            const checkboxes = parentSection.querySelectorAll(
+              'input[type="checkbox"]:checked'
+            );
+            if (checkboxes.length === 0) {
+              alert("Please select at least one option before proceeding.");
+              return;
+            }
             const invoiceAddress =
               parentSection.querySelector(".invoice-payment");
             invoiceAddress.style.display = "block";

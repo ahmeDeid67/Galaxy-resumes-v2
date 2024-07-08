@@ -1145,6 +1145,9 @@ input[type="checkbox"]:checked::after {
   text-align: center;
   margin-top: 18px;
   margin-bottom: 24px;
+}
+
+.invoice-payment-hidden {
   display: none;
 }
 
