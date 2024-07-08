@@ -441,7 +441,7 @@
             </div>
             <button class="proceed">Proceed</button>
 
-            <section class="invoice-payment">
+            <section class="invoice-payment-leadership">
               <img
                 src="./assets/UPI.jpg"
                 alt="Adressess Logo"
@@ -620,10 +620,12 @@
         //     window.location.href = "invoice.html";
         //   });
         // });
-        const invoiceAddress = document.querySelector(".invoice-payment");
         proceedBtn.forEach((btn) => {
           btn.addEventListener("click", (e) => {
             e.preventDefault();
+            const parentSection = btn.closest(".experience");
+            const invoiceAddress =
+              parentSection.querySelector(".invoice-payment");
             invoiceAddress.style.display = "block";
           });
         });
