@@ -515,15 +515,19 @@
 
         // // /////////////////////////////////////////////////
         proceedBtn.forEach((btn) => {
-          btn.addEventListener("click", function () {
+          btn.addEventListener("click", function (e) {
             const selectedPlan = selectElement.value;
             const selectedOptions = [];
             let totalPrice = 0;
+            let isAnyCheckboxSelected = false;
 
             sections.forEach((section) => {
               const checkboxes = section.querySelectorAll(
                 'input[type="checkbox"]:checked'
               );
+              if (checkboxes.length > 0) {
+                isAnyCheckboxSelected = true; // Set the flag to true if any checkbox is selected
+              }
               checkboxes.forEach((checkbox) => {
                 const price = parseInt(checkbox.getAttribute("data-price"));
                 totalPrice += price;
@@ -533,6 +537,12 @@
                 });
               });
             });
+
+            if (!isAnyCheckboxSelected) {
+              alert("Please select at least one option before proceeding.");
+              e.preventDefault(); // Prevent the default action
+              return; // Exit the function if no checkboxes are selected
+            }
 
             localStorage.setItem("selectedPlan", selectedPlan);
             localStorage.setItem(
