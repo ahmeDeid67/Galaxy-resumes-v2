@@ -9,7 +9,7 @@
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles/style.min.css" />
+    <link rel="stylesheet" href="styles/style.css" />
 
     <!-- Font Awesome -->
     <link
@@ -159,6 +159,30 @@
               <span class="pricing-color">Rs. 0</span>
             </div>
             <a href="invoice.html" class="proceed">Proceed</a>
+
+            <section class="invoice-payment">
+              <img
+                src="./assets/UPI.jpg"
+                alt="Adressess Logo"
+                class="invoice-img"
+              />
+              <p class="invoice-pay-text">
+                PayTM / GPay / PhonePe – 9818749023
+              </p>
+              <p class="invoice-pay-text">Net Banking</p>
+              <p class="invoice-pay-text">A/c Name -: GALAXY RESUMES</p>
+              <p class="invoice-pay-text">Bank - FEDERAL BANK</p>
+              <p class="invoice-pay-text">A/c No. - 23060200002209</p>
+              <p class="invoice-pay-text">A/c Type - CURRENT</p>
+              <p class="invoice-pay-text">IFSC Code - FDRL0002306</p>
+              <div class="invoice-footer">
+                <div class="invoice-instruction">
+                  Once done with payment, simply send us Payment Screenshot
+                  through Whats app or BOTIM at 9818749023 and we kick start the
+                  work within 5 minutes!!
+                </div>
+              </div>
+            </section>
             <p class="pricing--contact">
               Questions?!! Call or Whats app at +91 9818 749 023
             </p>
@@ -277,6 +301,30 @@
               <span class="pricing-color">Rs. 0</span>
             </div>
             <a href="invoice.html" class="proceed">Proceed</a>
+
+            <section class="invoice-payment">
+              <img
+                src="./assets/UPI.jpg"
+                alt="Adressess Logo"
+                class="invoice-img"
+              />
+              <p class="invoice-pay-text">
+                PayTM / GPay / PhonePe – 9818749023
+              </p>
+              <p class="invoice-pay-text">Net Banking</p>
+              <p class="invoice-pay-text">A/c Name -: GALAXY RESUMES</p>
+              <p class="invoice-pay-text">Bank - FEDERAL BANK</p>
+              <p class="invoice-pay-text">A/c No. - 23060200002209</p>
+              <p class="invoice-pay-text">A/c Type - CURRENT</p>
+              <p class="invoice-pay-text">IFSC Code - FDRL0002306</p>
+              <div class="invoice-footer">
+                <div class="invoice-instruction">
+                  Once done with payment, simply send us Payment Screenshot
+                  through Whats app or BOTIM at 9818749023 and we kick start the
+                  work within 5 minutes!!
+                </div>
+              </div>
+            </section>
             <p class="pricing--contact">
               Questions?!! Call or Whats app at +91 9818 749 023
             </p>
@@ -391,7 +439,32 @@
               Total
               <span class="pricing-color">Rs. 0</span>
             </div>
-            <a href="invoice.html" class="proceed">Proceed</a>
+            <button class="proceed">Proceed</button>
+
+            <section class="invoice-payment">
+              <img
+                src="./assets/UPI.jpg"
+                alt="Adressess Logo"
+                class="invoice-img"
+              />
+              <p class="invoice-pay-text">
+                PayTM / GPay / PhonePe – 9818749023
+              </p>
+              <p class="invoice-pay-text">Net Banking</p>
+              <p class="invoice-pay-text">A/c Name -: GALAXY RESUMES</p>
+              <p class="invoice-pay-text">Bank - FEDERAL BANK</p>
+              <p class="invoice-pay-text">A/c No. - 23060200002209</p>
+              <p class="invoice-pay-text">A/c Type - CURRENT</p>
+              <p class="invoice-pay-text">IFSC Code - FDRL0002306</p>
+              <div class="invoice-footer">
+                <div class="invoice-instruction">
+                  Once done with payment, simply send us Payment Screenshot
+                  through Whats app or BOTIM at 9818749023 and we kick start the
+                  work within 5 minutes!!
+                </div>
+              </div>
+            </section>
+
             <p class="pricing--contact">
               Questions?!! Call or Whats app at +91 9818 749 023
             </p>
@@ -404,17 +477,6 @@
             alt="Image"
             id="resumeImage"
           />
-          <!-- <div class="pricing-lower-text">
-            <div class="pricing-top">
-              <img src="./assets/UPI.jpg" alt="Adressess Logo" />
-              <p>PayTM / GPay / PhonePe – 9818749023</p>
-            </div>
-            <p>Internet Banking – YES BANK</p>
-            <p>Account No.-: 052285800000685</p>
-            <p>Account Name – GALAXY RESUMES</p>
-            <p>Account Type – CURRENT</p>
-            <p>IFSC Code – YESB0000522</p>
-          </div> -->
         </div>
       </div>
     </div>
@@ -514,48 +576,55 @@
         });
 
         // // /////////////////////////////////////////////////
+        // proceedBtn.forEach((btn) => {
+        //   btn.addEventListener("click", function (e) {
+        //     const selectedPlan = selectElement.value;
+        //     const selectedOptions = [];
+        //     let totalPrice = 0;
+        //     let isAnyCheckboxSelected = false;
+
+        //     sections.forEach((section) => {
+        //       const checkboxes = section.querySelectorAll(
+        //         'input[type="checkbox"]:checked'
+        //       );
+        //       if (checkboxes.length > 0) {
+        //         isAnyCheckboxSelected = true; // Set the flag to true if any checkbox is selected
+        //       }
+        //       checkboxes.forEach((checkbox) => {
+        //         const price = parseInt(checkbox.getAttribute("data-price"));
+        //         totalPrice += price;
+        //         selectedOptions.push({
+        //           name: checkbox.getAttribute("data-name"),
+        //           price: price,
+        //         });
+        //       });
+        //     });
+
+        //     if (!isAnyCheckboxSelected) {
+        //       alert("Please select at least one option before proceeding.");
+        //       e.preventDefault(); // Prevent the default action
+        //       return; // Exit the function if no checkboxes are selected
+        //     }
+
+        //     localStorage.setItem("selectedPlan", selectedPlan);
+        //     localStorage.setItem(
+        //       "selectedOptions",
+        //       JSON.stringify(selectedOptions)
+        //     );
+        //     localStorage.setItem("totalPrice", totalPrice);
+
+        //     console.log(localStorage.getItem("selectedPlan"));
+        //     console.log(localStorage.getItem("selectedOptions"));
+        //     console.log(localStorage.getItem("totalPrice"));
+
+        //     window.location.href = "invoice.html";
+        //   });
+        // });
+        const invoiceAddress = document.querySelector(".invoice-payment");
         proceedBtn.forEach((btn) => {
-          btn.addEventListener("click", function (e) {
-            const selectedPlan = selectElement.value;
-            const selectedOptions = [];
-            let totalPrice = 0;
-            let isAnyCheckboxSelected = false;
-
-            sections.forEach((section) => {
-              const checkboxes = section.querySelectorAll(
-                'input[type="checkbox"]:checked'
-              );
-              if (checkboxes.length > 0) {
-                isAnyCheckboxSelected = true; // Set the flag to true if any checkbox is selected
-              }
-              checkboxes.forEach((checkbox) => {
-                const price = parseInt(checkbox.getAttribute("data-price"));
-                totalPrice += price;
-                selectedOptions.push({
-                  name: checkbox.getAttribute("data-name"),
-                  price: price,
-                });
-              });
-            });
-
-            if (!isAnyCheckboxSelected) {
-              alert("Please select at least one option before proceeding.");
-              e.preventDefault(); // Prevent the default action
-              return; // Exit the function if no checkboxes are selected
-            }
-
-            localStorage.setItem("selectedPlan", selectedPlan);
-            localStorage.setItem(
-              "selectedOptions",
-              JSON.stringify(selectedOptions)
-            );
-            localStorage.setItem("totalPrice", totalPrice);
-
-            console.log(localStorage.getItem("selectedPlan"));
-            console.log(localStorage.getItem("selectedOptions"));
-            console.log(localStorage.getItem("totalPrice"));
-
-            window.location.href = "invoice.html";
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            invoiceAddress.style.display = "block";
           });
         });
 
