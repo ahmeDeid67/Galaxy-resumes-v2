@@ -1147,10 +1147,6 @@ input[type="checkbox"]:checked::after {
   margin-bottom: 24px;
 }
 
-.invoice-payment-hidden {
-  display: none;
-}
-
 .invoice-img {
   width: 100px;
 }
@@ -1652,6 +1648,7 @@ footer ul li:first-child {
 
   .experience {
     padding-bottom: 0;
+    width: fit-content;
   }
 
   .experience .total {
@@ -2077,5 +2074,21 @@ footer ul li:first-child {
 
   .invoice-btn {
     margin-bottom: 0;
+  }
+
+  .invoice-pay-text:first-of-type {
+    font-size: 16px;
+  }
+
+  .invoice-pay-text:not(:first-of-type) {
+    font-size: 12px;
+  }
+
+  .invoice-pay-text:nth-of-type(2) {
+    font-size: 16px;
+  }
+
+  .invoice-instruction {
+    font-size: 14px;
   }
 }
