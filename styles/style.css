@@ -1087,9 +1087,13 @@ input[type="checkbox"]:checked::after {
 }
 
 .invoice-total {
-  font-size: 18px;
+  font-size: 24px;
   margin-top: 18px;
   color: #cd5532;
+}
+
+.invoice-total strong {
+  color: #000;
 }
 
 .invoice-btns {
