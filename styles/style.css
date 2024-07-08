@@ -1076,7 +1076,7 @@ input[type="checkbox"]:checked::after {
   text-transform: capitalize;
   color: #000;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 52px;
 }
 
 .invoice-title span {

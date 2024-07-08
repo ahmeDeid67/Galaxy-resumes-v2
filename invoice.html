@@ -114,7 +114,9 @@
           invoiceList.appendChild(noItems);
         }
 
-        invoiceTotal.innerHTML = `<strong>Total</strong> - ${totalPrice || 0}`;
+        invoiceTotal.innerHTML = `<strong>Total</strong> - Rs. ${
+          totalPrice || 0
+        }`;
 
         localStorage.clear();
       });
