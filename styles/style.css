@@ -1085,6 +1085,7 @@ input[type="checkbox"]:checked::after {
 .invoice-box {
   width: fit-content;
   margin: auto;
+  margin-bottom: 100px;
 }
 
 .invoice-list {
