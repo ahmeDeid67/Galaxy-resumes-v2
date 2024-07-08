@@ -32,8 +32,9 @@
           <div class="invoice-subtitle">You Selected</div>
           <div class="invoice-title">Experienced Category</div>
           <div class="invoice-list">
-            <div class="invoice-item">Indian Resume &dash; 2100</div>
-            <div class="invoice-item">Cover Letter &dash; 900</div>
+            <div class="invoice-item">
+              Indian Resume &dash; <span class="invoice-item-text">2100</span>
+            </div>
           </div>
           <div class="invoice-total"><strong>Total</strong> - 3000</div>
           <div class="invoice-btns">
@@ -100,7 +101,7 @@
           selectedOptions.forEach((option) => {
             const invoiceItem = document.createElement("div");
             invoiceItem.classList.add("invoice-item");
-            invoiceItem.textContent = `${option.name} – ${option.price}`;
+            invoiceItem.innerHTML = `${option.name} <span>- ${option.price}</span>`;
             invoiceList.appendChild(invoiceItem);
           });
         } else {

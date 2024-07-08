@@ -654,6 +654,13 @@ input[type="checkbox"]:checked::after {
   text-align: center;
   padding-block: 8px 16px;
 }
+.invoice-subtitle {
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 8px;
+  text-transform: capitalize;
+  color: #cd5532;
+}
 .invoice-title {
   font-weight: 700;
   font-size: 30px;
