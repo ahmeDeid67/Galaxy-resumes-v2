@@ -76,7 +76,6 @@ header {
   position: relative;
 }
 .experience.hidden,
-.invoice-payment-hidden,
 .menu .menu-oc,
 .menu nav,
 .mobile {
@@ -1268,6 +1267,10 @@ footer ul li:first-child {
   .pricing .experience {
     padding-inline: 1rem;
   }
+  .experience {
+    padding-bottom: 0;
+    width: fit-content;
+  }
   .pricing-lower-text {
     font-size: 0.7rem;
     margin-block: 1rem;
@@ -1314,7 +1317,6 @@ footer ul li:first-child {
     top: 174px;
   }
   .experience {
-    padding-bottom: 0;
     margin-block: 0.5rem 2rem;
     padding-top: 0.7rem;
   }
@@ -1339,6 +1341,8 @@ footer ul li:first-child {
   .accordion {
     margin-top: 30px;
   }
+  .invoice-pay-text:first-of-type,
+  .invoice-pay-text:nth-of-type(2),
   .number,
   .text {
     font-size: 16px;
@@ -1365,5 +1369,11 @@ footer ul li:first-child {
   }
   .invoice-btn {
     margin-bottom: 0;
+  }
+  .invoice-pay-text:not(:first-of-type) {
+    font-size: 12px;
+  }
+  .invoice-instruction {
+    font-size: 14px;
   }
 }
