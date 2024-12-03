@@ -998,6 +998,7 @@ input[type="checkbox"]:checked::after {
 .experience label {
   font-size: 1.4rem;
   cursor: pointer;
+  color: #144072;
 }
 
 .experience .total {
