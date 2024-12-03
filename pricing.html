@@ -504,22 +504,195 @@
     <div id="footer-placeholder"></div>
 
     <script>
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   const selectElement = document.getElementById("experience");
+      //   const sections = document.querySelectorAll(".experience");
+      //   const totalPriceSpans = document.querySelectorAll(".total span");
+      //   const originalBorderColor = selectElement.style.borderColor;
+      //   const resumeImage = document.getElementById("resumeImage");
+      //   const resumeText = document.querySelector(".pricing-lower-text");
+      //   const proceedBtns = document.querySelectorAll(".proceed");
+
+      //   selectElement.addEventListener("change", () => {
+      //     selectElement.style.border = "1px solid #f00";
+      //   });
+
+      //   selectElement.addEventListener("blur", function () {
+      //     this.style.borderColor = originalBorderColor;
+      //   });
+
+      //   // Function to hide all sections except the selected one
+      //   function showSelectedSection(selectedOption) {
+      //     sections.forEach((section) => {
+      //       const invoiceAddress = section.querySelector(".invoice-payment");
+      //       if (section.classList.contains(selectedOption)) {
+      //         section.classList.remove("hidden");
+      //       } else {
+      //         section.classList.add("hidden");
+      //         if (invoiceAddress) {
+      //           invoiceAddress.style.display = "none";
+      //         }
+      //       }
+      //     });
+      //   }
+
+      //   // Function to update total price
+      //   function updateTotalPrice() {
+      //     sections.forEach((section, index) => {
+      //       const checkboxes = section.querySelectorAll(
+      //         'input[type="checkbox"]:checked'
+      //       );
+      //       const invoiceAddress = section.querySelector(".invoice-payment");
+      //       let currentTotal = 0;
+
+      //       checkboxes.forEach((checkbox) => {
+      //         const price = parseInt(checkbox.getAttribute("data-price"));
+      //         currentTotal += price;
+      //       });
+
+      //       // Display the total price for this section
+      //       totalPriceSpans[index].textContent = `Rs. ${currentTotal}`;
+
+      //       // Check if all checkboxes are unchecked
+      //       if (
+      //         section.querySelectorAll('input[type="checkbox"]:checked')
+      //           .length === 0
+      //       ) {
+      //         invoiceAddress.style.display = "none";
+      //       }
+      //     });
+      //   }
+
+      //   // Function to reset all checkboxes to unchecked
+      //   function resetCheckboxes() {
+      //     sections.forEach((section) => {
+      //       const checkboxes = section.querySelectorAll(
+      //         'input[type="checkbox"]'
+      //       );
+      //       checkboxes.forEach((checkbox) => {
+      //         checkbox.checked = false;
+      //       });
+      //     });
+      //   }
+
+      //   // Add event listener to select element
+      //   selectElement.addEventListener("change", function () {
+      //     // Get the selected option
+      //     const selectedOption = this.value;
+      //     // Reset all checkboxes
+      //     resetCheckboxes();
+      //     // Show the selected section
+      //     showSelectedSection(selectedOption);
+      //     // Update the total price
+      //     updateTotalPrice();
+      //     // Show the image and hide the text if not the default option
+      //     if (selectedOption === "") {
+      //       resumeImage.style.display = "block";
+      //       // resumeText.style.display = "none";
+      //     } else {
+      //       resumeImage.style.display = "none";
+      //       // resumeText.style.display = "block";
+      //     }
+      //   });
+
+      //   // Add event listeners to checkboxes
+      //   sections.forEach((section) => {
+      //     const checkboxes = section.querySelectorAll('input[type="checkbox"]');
+      //     checkboxes.forEach((checkbox) => {
+      //       checkbox.addEventListener("change", function () {
+      //         updateTotalPrice();
+      //       });
+      //     });
+      //   });
+
+      //   // // /////////////////////////////////////////////////
+      //   // proceedBtn.forEach((btn) => {
+      //   //   btn.addEventListener("click", function (e) {
+      //   //     const selectedPlan = selectElement.value;
+      //   //     const selectedOptions = [];
+      //   //     let totalPrice = 0;
+      //   //     let isAnyCheckboxSelected = false;
+
+      //   //     sections.forEach((section) => {
+      //   //       const checkboxes = section.querySelectorAll(
+      //   //         'input[type="checkbox"]:checked'
+      //   //       );
+      //   //       if (checkboxes.length > 0) {
+      //   //         isAnyCheckboxSelected = true; // Set the flag to true if any checkbox is selected
+      //   //       }
+      //   //       checkboxes.forEach((checkbox) => {
+      //   //         const price = parseInt(checkbox.getAttribute("data-price"));
+      //   //         totalPrice += price;
+      //   //         selectedOptions.push({
+      //   //           name: checkbox.getAttribute("data-name"),
+      //   //           price: price,
+      //   //         });
+      //   //       });
+      //   //     });
+
+      //   //     if (!isAnyCheckboxSelected) {
+      //   //       alert("Please select at least one option before proceeding.");
+      //   //       e.preventDefault(); // Prevent the default action
+      //   //       return; // Exit the function if no checkboxes are selected
+      //   //     }
+
+      //   //     localStorage.setItem("selectedPlan", selectedPlan);
+      //   //     localStorage.setItem(
+      //   //       "selectedOptions",
+      //   //       JSON.stringify(selectedOptions)
+      //   //     );
+      //   //     localStorage.setItem("totalPrice", totalPrice);
+
+      //   //     console.log(localStorage.getItem("selectedPlan"));
+      //   //     console.log(localStorage.getItem("selectedOptions"));
+      //   //     console.log(localStorage.getItem("totalPrice"));
+
+      //   //     window.location.href = "invoice.html";
+      //   //   });
+      //   // });
+      //   proceedBtns.forEach((btn) => {
+      //     btn.addEventListener("click", (e) => {
+      //       e.preventDefault();
+      //       const parentSection = btn.closest(".experience");
+      //       const checkboxes = parentSection.querySelectorAll(
+      //         'input[type="checkbox"]:checked'
+      //       );
+      //       if (checkboxes.length === 0) {
+      //         alert("Please select at least one option before proceeding.");
+      //         return;
+      //       }
+      //       const invoiceAddress =
+      //         parentSection.querySelector(".invoice-payment");
+      //       invoiceAddress.style.display = "block";
+      //     });
+      //   });
+
+      //   // Select the first option by default
+      //   selectElement.selectedIndex = 0;
+      //   const defaultOption =
+      //     selectElement.options[selectElement.selectedIndex].value;
+      //   showSelectedSection(defaultOption);
+      //   updateTotalPrice(); // Update total price on page load
+      // });
       document.addEventListener("DOMContentLoaded", function () {
         const selectElement = document.getElementById("experience");
         const sections = document.querySelectorAll(".experience");
         const totalPriceSpans = document.querySelectorAll(".total span");
         const originalBorderColor = selectElement.style.borderColor;
         const resumeImage = document.getElementById("resumeImage");
-        const resumeText = document.querySelector(".pricing-lower-text");
         const proceedBtns = document.querySelectorAll(".proceed");
 
-        selectElement.addEventListener("change", () => {
-          selectElement.style.border = "1px solid #f00";
-        });
-
-        selectElement.addEventListener("blur", function () {
-          this.style.borderColor = originalBorderColor;
-        });
+        // Function to reset all checkboxes and check the first one by default
+        function resetCheckboxes() {
+          sections.forEach((section) => {
+            const checkboxes = section.querySelectorAll(
+              'input[type="checkbox"]'
+            );
+            checkboxes.forEach((checkbox, index) => {
+              checkbox.checked = index === 0; // Check the first checkbox only
+            });
+          });
+        }
 
         // Function to hide all sections except the selected one
         function showSelectedSection(selectedOption) {
@@ -554,102 +727,30 @@
             totalPriceSpans[index].textContent = `Rs. ${currentTotal}`;
 
             // Check if all checkboxes are unchecked
-            if (
-              section.querySelectorAll('input[type="checkbox"]:checked')
-                .length === 0
-            ) {
+            if (checkboxes.length === 0) {
               invoiceAddress.style.display = "none";
             }
           });
         }
 
-        // Function to reset all checkboxes to unchecked
-        function resetCheckboxes() {
-          sections.forEach((section) => {
-            const checkboxes = section.querySelectorAll(
-              'input[type="checkbox"]'
-            );
-            checkboxes.forEach((checkbox) => {
-              checkbox.checked = false;
-            });
-          });
-        }
-
         // Add event listener to select element
         selectElement.addEventListener("change", function () {
-          // Get the selected option
           const selectedOption = this.value;
-          // Reset all checkboxes
-          resetCheckboxes();
-          // Show the selected section
+          resetCheckboxes(); // Reset and check the first checkbox in each category
           showSelectedSection(selectedOption);
-          // Update the total price
           updateTotalPrice();
-          // Show the image and hide the text if not the default option
-          if (selectedOption === "") {
-            resumeImage.style.display = "block";
-            // resumeText.style.display = "none";
-          } else {
-            resumeImage.style.display = "none";
-            // resumeText.style.display = "block";
-          }
+          resumeImage.style.display = selectedOption === "" ? "block" : "none";
         });
 
         // Add event listeners to checkboxes
         sections.forEach((section) => {
           const checkboxes = section.querySelectorAll('input[type="checkbox"]');
           checkboxes.forEach((checkbox) => {
-            checkbox.addEventListener("change", function () {
-              updateTotalPrice();
-            });
+            checkbox.addEventListener("change", updateTotalPrice);
           });
         });
 
-        // // /////////////////////////////////////////////////
-        // proceedBtn.forEach((btn) => {
-        //   btn.addEventListener("click", function (e) {
-        //     const selectedPlan = selectElement.value;
-        //     const selectedOptions = [];
-        //     let totalPrice = 0;
-        //     let isAnyCheckboxSelected = false;
-
-        //     sections.forEach((section) => {
-        //       const checkboxes = section.querySelectorAll(
-        //         'input[type="checkbox"]:checked'
-        //       );
-        //       if (checkboxes.length > 0) {
-        //         isAnyCheckboxSelected = true; // Set the flag to true if any checkbox is selected
-        //       }
-        //       checkboxes.forEach((checkbox) => {
-        //         const price = parseInt(checkbox.getAttribute("data-price"));
-        //         totalPrice += price;
-        //         selectedOptions.push({
-        //           name: checkbox.getAttribute("data-name"),
-        //           price: price,
-        //         });
-        //       });
-        //     });
-
-        //     if (!isAnyCheckboxSelected) {
-        //       alert("Please select at least one option before proceeding.");
-        //       e.preventDefault(); // Prevent the default action
-        //       return; // Exit the function if no checkboxes are selected
-        //     }
-
-        //     localStorage.setItem("selectedPlan", selectedPlan);
-        //     localStorage.setItem(
-        //       "selectedOptions",
-        //       JSON.stringify(selectedOptions)
-        //     );
-        //     localStorage.setItem("totalPrice", totalPrice);
-
-        //     console.log(localStorage.getItem("selectedPlan"));
-        //     console.log(localStorage.getItem("selectedOptions"));
-        //     console.log(localStorage.getItem("totalPrice"));
-
-        //     window.location.href = "invoice.html";
-        //   });
-        // });
+        // Proceed button logic
         proceedBtns.forEach((btn) => {
           btn.addEventListener("click", (e) => {
             e.preventDefault();
@@ -667,12 +768,13 @@
           });
         });
 
-        // Select the first option by default
+        // Initial setup
+        resetCheckboxes(); // Check the first checkbox in each section by default
         selectElement.selectedIndex = 0;
         const defaultOption =
           selectElement.options[selectElement.selectedIndex].value;
         showSelectedSection(defaultOption);
-        updateTotalPrice(); // Update total price on page load
+        updateTotalPrice();
       });
     </script>
   </body>
