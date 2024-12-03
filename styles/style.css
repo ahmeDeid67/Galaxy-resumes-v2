@@ -136,17 +136,17 @@ header {
   position: relative;
   height: 241px;
   width: 100%;
-  background-image: url("../assets/basketpng.png");
+  /* background-image: url("../assets/basketpng.png");
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 0;
 }
 
-.showcase h1 {
+/* .showcase h1 {
   position: absolute;
   bottom: 30px;
   left: 20px;
@@ -156,6 +156,19 @@ header {
   text-align: center;
   width: 50%;
   font-weight: 700;
+} */
+.showcase .main-heading {
+  font-size: 3.5rem;
+  padding-inline: 1rem;
+  text-transform: uppercase;
+}
+
+.showcase .main-heading span {
+  color: #144072;
+}
+
+.showcase .main-heading .main-heading--sub {
+  font-size: 2.5rem;
 }
 
 .why-galaxy h2 {
